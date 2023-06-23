@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		@@include('./include/head.html')
+	</head>
+	<body class="admin_body">
+		 <div class="page_wrap">
+            @@include('./include/header_sub.html')
+            <!-- middle -->
+            <section class="middle_zone sub_type2">
+                내용이 들어갑니다.
+            </section>
+            <!-- // middle -->
+        </div>
+		
+		<!-- layer -->
+		<div class="dlayer_w" id="find_address_layer">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_box">
+				<div class="dlayer_tit_low"><h2 class="dlayer_tit">주소 조회</h2></div>
+				<div class="dlayer_cont_low">
+					내용이 들어갑니다.
+				</div>
+				<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // layer -->
+		
+		<script>
+			dimLayerShow({ target : "#find_address_layer"});
+		</script>
+	</body>
+</html>

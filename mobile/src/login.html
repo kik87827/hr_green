@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+
+<body class="front_body">
+    <div class="page_wrap field_container_wrap">
+        @@include('./include/header.html')
+        <!-- middle -->
+        <section class="middle_zone field_container">
+            <div class="field_content_box">
+                <div class="field_copy_group">
+                    <h2 class="field_copy_main">
+                        <span class="fcopy_main_sig">인사지원시스템</span>
+                    </h2>
+                </div>
+                <div class="field_form_group">
+                    <div class="field_form_tb">
+                        <div class="field_form_tr">
+                            <div class="field_form_cell define_th"><label for="login_01"
+                                    class="field_form_label">사번</label></div>
+                            <div class="field_form_cell define_td">
+                                <input type="text" class="field_form_input" placeholder="201440002" id="login_01">
+                            </div>
+                        </div>
+                        <div class="field_form_tr nbsp_tr">
+                            <div class="field_form_cell"></div>
+                        </div>
+                        <div class="field_form_tr">
+                            <div class="field_form_cell define_th"><label for="login_02"
+                                    class="field_form_label">OTP</label></div>
+                            <div class="field_form_cell define_td">
+                                <input type="password" class="field_form_input type2" placeholder="●●●●●●●●●●"
+                                    id="login_02">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="field_else_row">
+                        <div class="rdchkitem small">
+                            <input type="checkbox" class="rdchk" name="choice" id="idsave">
+                            <label for="idsave" class="rdchk_lab">아이디 저장</label>
+                        </div>
+                    </div> -->
+                    <div class="btn_field_submit_row">
+                        <a href="#" class="btn_field_submit">로그인</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // middle -->
+    </div>
+</body>
+
+</html>
