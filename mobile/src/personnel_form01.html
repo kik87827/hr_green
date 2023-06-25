@@ -3,12 +3,125 @@
     @@include('./include/head.html')
     <body class="front_body">
         <div class="page_wrap">
-            @@include('./include/header.html')
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "제증명 신청"
+            })
             <!-- middle -->
             <section class="middle_zone">
-                내용이 들어갑니다.
+               <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">결재라인</p>
+                                <button type="button" class="btn_form_more" id="btn_form_more"></button>
+                            </div>
+                            <div class="form_field_content_row type2">
+                                <div class="field_content_item">
+                                    <p class="field_content_title">작성부서</p>
+                                    <div class="field_content_data_wrap">
+                                        <ul class="field_data_form">
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">곽훈도(과장/6급)</div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="field_content_item">
+                                    <p class="field_content_title">처리부서</p>
+                                    <div class="field_content_data_wrap">
+                                        <ul class="field_data_form">
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">진상인(과장/6급)</div></div>
+                                            </li>
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">홍길동(팀장/5급)</div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">신청내역</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="fvtb_w dtype4">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                                <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">증명서구분</span></th>
+                                                <td>
+                                                    <select class="dsel">
+                                                        <option>재직증명서(국문)</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">신청부수</span></th>
+                                                <td>
+                                                    <select class="dsel">
+                                                        <option>1</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp align_type2"><span class="fvth_sp">제출처</span></th>
+                                                <td>
+                                                    <input type="text" class="fvint" placeholder="입력">
+                                                    <p class="fvint_hit">(예-미대사관)</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">용도</span></th>
+                                                <td>
+                                                    <select class="dsel">
+                                                        <option>대출용</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr class="type3">
+                                                <td colspan="2">
+                                                    <p class="fvth_block">비고</p>
+                                                    <textarea class="fvta htype2"></textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_fsm_w">
+                        <a href="javascript:;" class="btn_fsm">결재요청</a>
+                    </div>
+               </div>
             </section>
             <!-- // middle -->
         </div>
+
+        @@include('./include/sign_popup.html')
+
+        <script>
+            // 퍼블확인용
+            let url = window.location.href.split('?')[1];
+            let url_2 = url !== undefined ? url.split('#')[0] : null;
+            if(url_2 === "popup"){
+                dimLayerShow({ target : "#sign_layer"});
+            }
+
+            document.querySelector("#btn_form_more").addEventListener("click",()=>{
+                dimLayerShow({ target : "#sign_layer"});
+            });
+        </script>
+        
     </body>
 </html>

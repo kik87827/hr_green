@@ -3,12 +3,38 @@
     @@include('./include/head.html')
     <body class="front_body">
         <div class="page_wrap">
-            @@include('./include/header.html')
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "시간외근무신청"
+            })
             <!-- middle -->
             <section class="middle_zone">
                 내용이 들어갑니다.
             </section>
             <!-- // middle -->
         </div>
+
+        <!-- layer -->
+		<div class="dlayer_w" id="sign_layer">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_box">
+				<div class="dlayer_tit_low"><h2 class="dlayer_tit">결재자 지정</h2></div>
+				<div class="dlayer_cont_low">
+					내용이 들어갑니다.
+				</div>
+				<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // layer -->
+
+        <!-- <script>
+            // 퍼블확인용
+            let url = window.location.href.split('?')[1];
+            let url_2 = url !== undefined ? url.split('#')[0] : null;
+            if(url_2 === "popup"){
+                dimLayerShow({ target : "#sign_layer"});
+            }
+        </script> -->
+
     </body>
 </html>

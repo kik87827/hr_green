@@ -3,7 +3,10 @@
     @@include('./include/head.html')
     <body class="front_body">
         <div class="page_wrap">
-            @@include('./include/header.html')
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "임직원조회"
+            })
             <!-- middle -->
             <section class="middle_zone">
                 내용이 들어갑니다.

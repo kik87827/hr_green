@@ -3,12 +3,178 @@
     @@include('./include/head.html')
     <body class="front_body">
         <div class="page_wrap">
-            @@include('./include/header.html')
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "복직신청서"
+            })
             <!-- middle -->
             <section class="middle_zone">
-                내용이 들어갑니다.
+               <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">결재라인</p>
+                                <button type="button" class="btn_form_more" id="btn_form_more"></button>
+                            </div>
+                            <div class="form_field_content_row type2">
+                                <div class="field_content_item">
+                                    <p class="field_content_title">작성부서</p>
+                                    <div class="field_content_data_wrap">
+                                        <ul class="field_data_form">
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">곽훈도(과장/6급)</div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="field_content_item">
+                                    <p class="field_content_title">처리부서</p>
+                                    <div class="field_content_data_wrap">
+                                        <ul class="field_data_form">
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">진상인(과장/6급)</div></div>
+                                            </li>
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">홍길동(팀장/5급)</div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">신청서 내용</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="fvtb_w dtype4">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                                <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">휴직유형</span></th>
+                                                <td>
+                                                    <select class="dsel" disabled>
+                                                        <option>출산/육아</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">휴직일자</span></th>
+                                                <td>
+                                                    <input type="date" class="input_calendar" value="2020-01-01">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">질병명</span></th>
+                                                <td>
+                                                    <select class="dsel" disabled>
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">휴직사유</span></th>
+                                                <td><input type="text" class="fvint" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">복직일자</span></th>
+                                                <td>
+                                                    <input type="date" class="input_calendar">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">사유</span></th>
+                                                <td>
+                                                    <input type="text" class="fvint" placeholder="입력">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">현주소</span></th>
+                                                <td>
+                                                    <input type="text" class="fvint" placeholder="입력">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">비고</span></th>
+                                                <td>
+                                                    <input type="text" class="fvint" placeholder="입력">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_fsm_w">
+                        <div class="btn_fsm_fxwrap">
+                            <a href="javascript:;" data-toggle="#file_form5" class="btn_fsm type2 d_type2"><span class="toggle_ico"></span><span class="toggle_text">첨부파일</span></a>
+                            <a href="javascript:;" class="btn_fsm">결재요청</a>
+                        </div>
+                    </div>
+                    <div class="file_form_group toggle_item" id="file_form5">
+                        <div class="fileui_tb_w">
+                            <div class="fileui_tb">
+                                <div class="fileui_td has_btn">
+                                    <div class="fkef_tb2_w">
+                                        <input type="file" class="fkef_file">
+                                        <a href="javascript:;" class="btn_fakefile">파일 선택</a>
+                                    </div>
+                                </div>
+                                <div class="fileui_td">
+                                    <div class="filename_para">선택된 파일 없음</div>
+                                </div>
+                                <div class="fileui_td has_btn">
+                                    <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tbsk_tb_w">
+                            <table class="tbsk_tb">
+                                <thead>
+                                    <tr>
+                                        <th class="ctb2_w01">파일명</th>
+                                        <th class="ctb2_w02">용량</th>
+                                        <th class="ctb2_w03">삭제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="has_data">첨부파일.jpg</td>
+                                        <td>14KB</td>
+                                        <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+               </div>
             </section>
             <!-- // middle -->
         </div>
+
+        @@include('./include/sign_popup.html')
+
+        <script>
+            // 퍼블확인용
+            let url = window.location.href.split('?')[1];
+            let url_2 = url !== undefined ? url.split('#')[0] : null;
+            if(url_2 === "popup"){
+                dimLayerShow({ target : "#sign_layer"});
+            }
+
+            document.querySelector("#btn_form_more").addEventListener("click",()=>{
+                dimLayerShow({ target : "#sign_layer"});
+            });
+        </script>
+        
     </body>
 </html>

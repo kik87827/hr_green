@@ -5,7 +5,7 @@
         <div class="page_wrap">
             @@include('./include/header_sub.html', {
                 page_sub: true,
-                sub_title: "퇴직신청서"
+                sub_title: "제증명 신청"
             })
             <!-- middle -->
             <section class="middle_zone">
@@ -47,7 +47,7 @@
                         </div>
                         <div class="form_field_item">
                             <div class="form_field_title_row">
-                                <p class="form_field_title">신청서 내용</p>
+                                <p class="form_field_title">신청내역</p>
                             </div>
                             <div class="form_field_content_row">
                                 <div class="fvtb_w dtype4">
@@ -58,60 +58,41 @@
                                                 <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
                                             </tr>
                                             <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">사번</span></th>
-                                                <td><input type="text" class="fvint" readonly value="0241"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">부서</span></th>
-                                                <td><input type="text" class="fvint" readonly value="eHR파트"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">직위</span></th>
-                                                <td><input type="text" class="fvint" readonly value="과장"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">직급</span></th>
-                                                <td><input type="text" class="fvint" readonly value="G4"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">직책</span></th>
-                                                <td><input type="text" class="fvint" readonly value="팀원"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp imp">퇴직희망일자</span></th>
-                                                <td>
-                                                    <input type="date" class="input_calendar">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp imp">퇴직사유</span></th>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">증명서구분</span></th>
                                                 <td>
                                                     <select class="dsel">
-                                                        <option>선택</option>
+                                                        <option>재직증명서(국문)</option>
                                                     </select>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th class="has_fvth_sp align_type2"><span class="fvth_sp imp">퇴직세부사유</span></th>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">신청부수</span></th>
                                                 <td>
-                                                    <textarea class="fvta htype2"></textarea>
+                                                    <select class="dsel">
+                                                        <option>1</option>
+                                                    </select>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>연락처</span></th>
-                                                <td><input type="text" class="fvint" placeholder="입력"></td>
+                                                <th class="has_fvth_sp align_type2"><span class="fvth_sp">제출처</span></th>
+                                                <td>
+                                                    <input type="text" class="fvint" placeholder="입력">
+                                                    <p class="fvint_hit">(예-미대사관)</p>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>주소</span></th>
-                                                <td><input type="text" class="fvint" placeholder="입력"></td>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">용도</span></th>
+                                                <td>
+                                                    <select class="dsel">
+                                                        <option>대출용</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>사내 연락인</span></th>
-                                                <td><input type="text" class="fvint" placeholder="입력"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>이메일</span></th>
-                                                <td><input type="text" class="fvint" placeholder="입력"></td>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">기준년도</span></th>
+                                                <td>
+                                                    <input type="text" class="fvint" placeholder="입력">
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>

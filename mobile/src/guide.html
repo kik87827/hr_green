@@ -3,19 +3,10 @@
 	@@include('./include/head.html')
 	<body class="front_body">
 		<div class="page_wrap">
-			<!-- header -->
-            <header class="header_zone">
-                <div class="header_icomenu_g">
-                    <a href="#" class="header_icomenu ico_home"><span class="hdtext">홈</span></a>
-                </div>
-                <h1 class="header_sub_title">폼박스 퍼블 가이드</h1>
-                <a href="#" class="btn_mobile_menu">
-                    <div class="btn_mobile_menu_obj"></div>
-                    <span class="hdtext">전체메뉴 열기</span>
-                </a>
-                @@include('./include/menu.html')
-            </header>
-            <!-- // header -->
+			@@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "가이드"
+            })
 			<!-- middle -->
             <section class="middle_zone">
                 <div class="middle_incontent">

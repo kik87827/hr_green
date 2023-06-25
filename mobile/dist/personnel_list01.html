@@ -16,12 +16,13 @@
 
 <body class="front_body">
 	<div class="page_wrap">
-		<!-- header -->
 		<header class="header_zone">
 			<div class="header_icomenu_g">
 				<a href="#" class="header_icomenu ico_home"><span class="hdtext">홈</span></a>
 			</div>
+
 			<h1 class="header_sub_title">개인기록조회</h1>
+
 			<a href="#" class="btn_mobile_menu">
 				<div class="btn_mobile_menu_obj"></div>
 				<span class="hdtext">전체메뉴 열기</span>
@@ -48,18 +49,14 @@
 						<div class="mbmenu_inwrap">
 							<ul class="mbmenu_vlist">
 								<li><a href="#" class="mbmenu_one">MY인사</a></li>
-								<li><a href="#" class="mbmenu_one">승인현황</a></li>
+								<li><a href="#" class="mbmenu_one">승인요청</a></li>
 								<li><a href="#" class="mbmenu_one">승인대기</a></li>
-								<li><a href="#" class="mbmenu_one">사진변경신청</a></li>
 								<li><a href="#" class="mbmenu_one">근태현황</a></li>
 								<li><a href="#" class="mbmenu_one">근태신청</a></li>
 								<li><a href="#" class="mbmenu_one">복지지원비신청</a></li>
-								<li><a href="#" class="mbmenu_one">치료비신청</a></li>
 								<li><a href="#" class="mbmenu_one">휴양시설</a></li>
 								<li><a href="#" class="mbmenu_one">급여명세서조회</a></li>
 								<li><a href="#" class="mbmenu_one">제증명신청</a></li>
-								<li><a href="#" class="mbmenu_one">제신고</a></li>
-								<li><a href="#" class="mbmenu_one">피드백&코칭</a></li>
 								<li><a href="#" class="mbmenu_one">임직원조회</a></li>
 							</ul>
 						</div>
@@ -71,7 +68,6 @@
 			</div>
 			<!-- // mobile_menu -->
 		</header>
-		<!-- // header -->
 		<!-- middle -->
 		<section class="middle_zone">
 			<div class="middle_content_row type2">
@@ -121,9 +117,128 @@
 						</tbody>
 					</table>
 				</div>
+				<div class="tabcontent_w" id="tabcont_ui">
+					<div class="tabmenu_box_list_wrap">
+						<ul class="tabmenu_box_list">
+							<li><a href="#tabcont01" class="tabmenu_box active"><span class="tabmenu_box_text">기본</span></a></li>
+							<li><a href="#tabcont02" class="tabmenu_box"><span class="tabmenu_box_text">발령</span></a></li>
+							<li><a href="#tabcont03" class="tabmenu_box"><span class="tabmenu_box_text">학력</span></a></li>
+							<li><a href="#tabcont04" class="tabmenu_box"><span class="tabmenu_box_text">평가</span></a></li>
+						</ul>
+					</div>
+					<style>
+						table[name='both_keytb'] .short_wid {
+							width: 30%;
+						}
+
+						table[name='both_keytb'] .long_wid {}
+
+						table[name='division_keytb'] .short_wid {
+							width: 25%;
+						}
+
+						table[name='division_keytb'] .long_wid {}
+					</style>
+					<div class="tabmenu_cont_wrap">
+						<div class="tabmenu_cont active" id="tabcont01">
+							<div class="fvtb_w dtype3">
+								<table class="fvtb key_type">
+									<tr>
+										<th><span class="fvth_sp">그룹입사일</span></th>
+										<td><input type="text" class="fvint" value="2019.01.01" readonly></td>
+									</tr>
+									<tr>
+										<th><span class="fvth_sp">성별</span></th>
+										<td><input type="text" class="fvint" value="남" readonly></td>
+									</tr>
+									<tr>
+										<th><span class="fvth_sp">생일</span></th>
+										<td><input type="text" class="fvint" value="1980.01.05" readonly></td>
+									</tr>
+									<tr>
+										<th><span class="fvth_sp">핸드폰</span></th>
+										<td><input type="text" class="fvint" value="010-1234-5678" readonly></td>
+									</tr>
+									<tr>
+										<th><span class="fvth_sp">e-mail</span></th>
+										<td><input type="text" class="fvint" value="e-mail.company.co.kr" readonly></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="tabmenu_cont" id="tabcont02">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb" name="both_keytb">
+									<thead>
+										<tr>
+											<th class="short_wid">발령일</th>
+											<th class="long_wid">발령명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="short_wid"><span class="tb_data">2020-01-01</span></td>
+											<td class="long_wid"><span class="tb_data">신규채용</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="tabmenu_cont" id="tabcont03">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb" name="division_keytb">
+									<thead>
+										<tr>
+											<th class="short_wid">학력</th>
+											<th class="short_wid">학교명</th>
+											<th class="long_wid">전공</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="short_wid"><span class="tb_data">대학원</span></td>
+											<td class="short_wid"><span class="tb_data">OO대학원</span></td>
+											<td class="long_wid"><span class="tb_data">산업공학</span></td>
+										</tr>
+										<tr>
+											<td class="short_wid"><span class="tb_data">대학</span></td>
+											<td class="short_wid"><span class="tb_data">OO대학원</span></td>
+											<td class="long_wid"><span class="tb_data">전자공학</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="tabmenu_cont" id="tabcont04">
+							<div class="tbsk_tb_w">
+								<table class="tbsk_tb" name="both_keytb">
+									<thead>
+										<tr>
+											<th class="short_wid">평가년도</th>
+											<th class="long_wid">평가등급</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="short_wid"><span class="tb_data">2023년</span></td>
+											<td class="long_wid"><span class="tb_data">S</span></td>
+										</tr>
+										<tr>
+											<td class="short_wid"><span class="tb_data">2022년</span></td>
+											<td class="long_wid"><span class="tb_data">A</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<!-- // middle -->
+		<script>
+			tabUITab("#tabcont_ui");
+		</script>
 	</div>
 </body>
 

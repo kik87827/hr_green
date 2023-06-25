@@ -17,7 +17,7 @@
 }
 
 .header_zone{width:100%;background:#fff;box-sizing:border-box;border-bottom:1px solid #b8b8b8;height:52px;text-align: center;padding:0 51px;position:fixed;top:0;left:0;z-index:50}
-
+.header_zone.type2{padding-left:15px;}
 .header_logo_g{display:flex;align-items: center;position:absolute;top:0;left:15px;height:100%;font-size:0;line-height:0;}
 .header_plogo{display:inline-block;margin-right:9px;}
 .header_plogo:last-of-type{margin-right:0;}
@@ -26,7 +26,7 @@
 .header_plogo.logo_bc{}
 .header_plogo.logo_bc img{width:23px;}
 .header_main_title{display:flex;height:100%;align-items: center;color:#333333;justify-content: center;font-weight:700;font-size:18px;}
-.header_sub_title{display:flex;height:100%;align-items: center;color:#1b1b1b;justify-content: center;font-weight:700;font-size:14px;}
+.header_sub_title{display:flex;height:100%;align-items: center;color:#1b1b1b;justify-content: center;font-weight:700;font-size:16px;}
 
 .header_logo{height:49px;display:flex;align-items:center;}
 .header_logoitem{display:inline-block;font-size:0;line-height:0;}
@@ -35,6 +35,10 @@
 .header_icomenu_g{position:absolute;top:0;left:0;display:flex;align-items: center;}
 .header_icomenu{display:inline-block;width:51px;height:51px;background-repeat:no-repeat;background-size:100% auto;background-position:0 0;}
 .header_icomenu.ico_home{background-image:url("../images/ico_header_home.png");}
+
+.header_main_imgtitle{display:flex;align-items: center;height:100%;position:absolute;top:0;left:0;padding:0 15px;}
+.header_main_imglogo{display:inline-block;font-size:0;line-height:0;}
+.header_main_imglogo > img{width:80px;vertical-align: top;}
 
 .btn_mobile_menu{display:block;position:absolute;width:51px;height:51px;top:0;right:0;}
 .btn_mobile_menu_obj{
@@ -56,7 +60,7 @@
 .mobile_mainmenu_wrap{width:247px;background:#fff;position:fixed;top:0;right:-247px;height:100%; transition: .5s;display:flex;flex-direction: column;}
 .mbelse_low{flex:0;padding:20px;text-align: center;}
 .mbelse_copy{font-size:10px;}
-.mbutil_low{height:50px;background:#3070b7;display:flex;align-items: center;padding:0 50px 0 20px;position:relative;z-index:5;flex:0 0 50px;}
+.mbutil_low{height:50px;background:#3181da;display:flex;align-items: center;padding:0 50px 0 20px;position:relative;z-index:5;flex:0 0 50px;}
 .mbutil_hlist{
     display:flex;align-items: center;
 }
