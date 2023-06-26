@@ -276,3 +276,68 @@ function tabUITab(target){
 		});
 	});
 }
+
+function toggleFunc(){
+  const toggleBtn = document.querySelectorAll("[data-target]");
+  if(!!toggleBtn){
+    toggleBtn.forEach((item)=>{
+      item.addEventListener("click",(e)=>{
+        e.preventDefault();
+        const eBtn = e.currentTarget;
+        const eTarget = document.querySelector(eBtn.getAttribute("data-target"));
+        if(!!eTarget){
+          eTarget.classList.toggle("active");
+        }
+      });
+    });
+  }
+}
+
+function mainTailTabFunc(){
+  const mc_tailtab = document.querySelectorAll(".mc_tailtab");
+	const mc_tailtab_cont = document.querySelectorAll(".mc_tailmenu_controw .mc_tailtab_cont");
+	let mc_tailtab_active = Array.from(mc_tailtab).filter(item => item.classList.contains("active"))[0];
+	let mc_tailtab_cont_active = Array.from(mc_tailtab_cont).filter(item => item.classList.contains("active"))[0];
+  let widowInitWidth = window.innerWidth;
+	
+  // init
+  heightDefine(mc_tailtab_cont_active);
+  
+
+  //event
+  window.addEventListener("resize",()=>{
+    if(widowInitWidth !== window.innerWidth){
+      heightDefine(mc_tailtab_cont_active);
+    }
+    widowInitWidth = window.innerWidth;
+  });
+  
+  mc_tailtab.forEach((item)=>{
+		item.addEventListener("click",(e)=>{
+			e.preventDefault();
+			const targetItem = e.currentTarget;
+			const targetItemDom = document.querySelector(targetItem.getAttribute("href"));
+			if(mc_tailtab_active){
+				mc_tailtab_active.classList.remove("active");
+			}
+			if(mc_tailtab_cont_active){
+				mc_tailtab_cont_active.classList.remove("active");
+			}
+			if(!!targetItemDom){
+				targetItemDom.classList.add("active");
+        heightDefine(targetItemDom);
+				mc_tailtab_cont_active = targetItemDom;
+			}
+			targetItem.classList.add("active");
+			mc_tailtab_active = targetItem;
+		});
+	});
+
+  function heightDefine(target){
+    const targetCont = target.querySelector(".tailtab_fxcont");
+    const targetMenuLi = target.querySelectorAll(".tailtab_menu_list > li")[5];
+    if(!!targetMenuLi){
+      targetCont.style.maxHeight = targetMenuLi.offsetTop + 'px';
+    }
+  }
+}
