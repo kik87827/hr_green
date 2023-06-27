@@ -341,3 +341,21 @@ function mainTailTabFunc(){
     }
   }
 }
+
+
+function profileListToggle(){
+  const profile_toggle_item = document.querySelectorAll(".profile_toggle_item");
+  if(!!profile_toggle_item){
+    profile_toggle_item.forEach((item)=>{
+      const thisItem = item;
+      const thisItemBar = thisItem.querySelector(".profile_toggle_bar");
+      const thisItemTail = thisItem.querySelector(".profile_toggle_tail");
+      thisItemBar.addEventListener("click",(e)=>{
+        if(!!e.target.closest(".profile_control_btn_list")){
+          return;
+        }
+        thisItem.classList.toggle("active");
+      });
+    })
+  }
+}
