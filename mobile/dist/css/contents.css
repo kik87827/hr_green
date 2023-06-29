@@ -170,6 +170,7 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .dlayer_bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:5;background:rgba(0,0,0,.85);}
 .dlayer_box{z-index:10;position:fixed;top:40px;left:15px;width:calc(100% - 30px); height:calc(100% - 80px);}
 .dlayer_tit_low{position:absolute;top:0;left:0;width:100%;height:51px;z-index:5;text-align:center;border-radius:10px 10px 0 0;background: #f5faff;border-bottom:1px solid #cbd5dd;}
+.dlayer_tit_low.type2{border-bottom:0;}
 .dlayer_tit{color:#1f1f1f;font-size:16px;font-family: 'NotoSans-Medium';text-align:center;line-height:51px;letter-spacing: -1px;}
 .dlayer_titsub{display:inline-block;font-size:14px;line-height:1;}
 .dlayer_cont_low{box-sizing:border-box;position:absolute;top:51px;left:0;width:100%;height:calc(100% - 51px);overflow-y:auto;background:#fff;border-radius:0 0 10px 10px;}
@@ -241,9 +242,14 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .fvtb tbody tr.type2 table tr:first-of-type td{border-top:0;}
 .fvtb tbody tr.type2 table tr:last-of-type th,
 .fvtb tbody tr.type2 table tr:last-of-type td{border-bottom:0;}
+.fvtb tbody tr.type4 th{background:none;border:0;padding:10px 10px;}
+.fvtb tbody tr.type4 td{border:0;padding:10px 0;}
 .fvtb tbody td.nbsp_emptyline{padding:0 !important;height:10px;}
 .fvtb tbody td.has_fphoto{padding:15px}
-.fvtb tbody tr.type3 td{padding:10px}
+.fvtb tbody tr.type4 > td{padding:0 10px 15px !important}
+.fvtb tbody tr.type4 > td.type2{padding:10px !important}
+.fvtb tbody tr.has_tb > td{padding:0 10px 10px !important}
+.data_thtext{position:relative;display:inline-block;white-space:nowrap;color:#1b1b1b;font-size:12px;position:relative;line-height:1.2;}
 .fvth_sp{position:relative;display:inline-block;white-space:nowrap;color:#1b1b1b;font-size:12px;position:relative;line-height:1.2;}
 .fvth_block{position:relative;display:inline-block;color:#1b1b1b;font-size:12px;position:relative;line-height:1.2;margin-bottom:8px;}
 /* .fvth_sp:before{display:block;content:'';width:3px;height:3px;background:#3181da;border-radius:100%;position:absolute;top:9px;left:0;} */
@@ -259,6 +265,7 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .form_field_item:last-of-type{margin-bottom:0;}
 
 .form_field_title_row{border-bottom:1px solid #626262;position:relative;padding-bottom:8px;display:flex;justify-content: space-between;}
+.form_field_title_row.align_type2{align-items: flex-end;}
 .form_field_title_row .btn_form_more{}
 .form_field_title{font-size: 14px;color: #000;font-family: 'NotoSans-Medium';}
 .btn_form_more{display:block;width:20px;height:20px;background:#fcfcfc;box-sizing: border-box;}
@@ -344,6 +351,7 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .data_table_top{text-align:right;margin:15px;font-size:0;line-height:0;}
 .btn_csm_w.type2{text-align: center;}
 .btn_csm{display:inline-block;background:#3181da;padding:7px 8px 8px;line-height:1;margin-right:5px;min-width:50px;border:1px solid #3181da;text-align:center;border-radius:100px;text-align:center;color:#fff;font-family: 'NotoSans-Medium';font-size:12px;}
+.btn_csm.small{padding:4px 6px 5px;font-size:10px;}
 .btn_csm:last-of-type{margin-right:0;}
 .btn_csm.type2{background:#f8f8f8;border-color:#858585;color:#1f1f1f;}
 .btn_csm.type3{background:#4b4b4b;border-color:#4b4b4b;}
@@ -354,10 +362,23 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .inblock_item:last-of-type{margin-bottom:0;}
 
 .inform_item_fxwrap{display:flex;gap:10px;align-items: center;}
+.inform_item_fxwrap.hor_align{justify-content: space-between;}
+.inform_item_fxwrap.hor_align .inform_item{font-size:0;line-height:0;}
 .inform_item{flex:1;}
+.inform_item.wid_short10{flex:0 0 10%;}
+.inform_item.wid_short20{flex:0 0 20%;}
+.inform_item.wid_short30{flex:0 0 30%;}
+.inform_item.wid_short40{flex:0 0 40%;}
+.inform_item.flex_item_right{display:flex;justify-content: flex-end;}
+.unit_form_wrap{display:flex;align-items: center;gap:10px;}
+.unit_form_cols{flex:1;min-width:0;}
+.unit_form_cols > *{width:100%;}
+.unit_text_cols{flex:0;white-space: nowrap;}
+.fvint_unit{font-size:12px;color:#2b2b2b;}
 
 input.fvint{border:1px solid #d5d5d5;border-radius:4px;height:30px;padding:0 10px;line-height:1;box-sizing:border-box;width:100%;font-size:12px;color:#2b2b2b;}
 input.fvint.aright{text-align: right;}
+input.fvint.acenter{text-align: center;}
 .fvint.short_count{text-align: center;}
 input.fvint:disabled,
 input.fvint:read-only{background:#f7f7f7;color:#333333;opacity:1;}
@@ -386,9 +407,7 @@ select.dsel:disabled{background-color:#f7f7f7;color:#333333;;opacity:1;}
 
 
 .rdchkitem_list_w{}
-.rdchkitem_list{position:relative;top:5px;display:flex;flex-wrap:wrap;}
-.rdchkitem_list > li{padding:0 20px 10px 0;}
-.rdchkitem_list > li:last-of-type{padding-right:0;}
+.rdchkitem_list{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:0;line-height:0;}
 
 .rdchkitem{display:inline-flex;line-height:0;font-size:0;}
 .rdchk_lab{font-size:12px;position:relative;color:#2b2b2b;display:inline-block;cursor:pointer;padding-top:0;margin-left:5px;line-height:1.3;}
@@ -410,7 +429,10 @@ select.dsel:disabled{background-color:#f7f7f7;color:#333333;;opacity:1;}
 	.rdchkitem_list.inline_type2 > li{flex:inherit;}
 }
 @media(max-width:450px){
-	inline_item.break_cell{flex:1;}
+	.inline_item.break_cell{flex:1;}
+}
+@media(max-width:359px){
+	
 }
 
 .btn_botpsm_w{text-align:right;margin:10px 0 0 0}
@@ -709,6 +731,10 @@ input.dlsort_int{height:30px;padding-left:10px;padding-right:10px;line-height:1;
 .data_tb_w.define_thead .data_tb th{border-bottom:0;}
 .data_tb_w.define_tbody{border-top:0;position:relative;overflow-y:auto;}
 
+.data_tb.type5{font-size:12px;}
+.data_tb.type5 thead th{padding:10px;text-align: center;font-size:0;line-height:0;}
+.data_tb.type5 tbody td{text-align: center;font-size:12px;}
+.data_tb.type5 .d_norsp{font-size:12px;}
 
 .dbox_group_zone{margin-bottom:30px;}
 .dbox_group{display:flex;flex-wrap:wrap;margin:-5px;}
@@ -763,7 +789,7 @@ input.input_calendar:focus{border-color:#000;}
 input.input_calendar:disabled,
 input.input_calendar:read-only{background:#f7f7f7;color:#999999;opacity:1;}
 
-input.input_time{border:1px solid #bbbbbb;height:30px;padding:0 10px;line-height:1;box-sizing:border-box;width:100%;font-size:12px;color:#2b2b2b;font-family: 'NotoSans-Regular';
+input.input_time{border:1px solid #d5d5d5;border-radius:4px;height:30px;padding:0 30px 0 10px;line-height:1;box-sizing:border-box;width:100%;font-size:12px;color:#2b2b2b;font-family: 'NotoSans-Regular';background:#fff url("../images/ico_text_time.png") no-repeat 100% 50%/30px auto;
 	-webkit-appearance: none;
 	appearance: none;
 	-moz-appearance: none;

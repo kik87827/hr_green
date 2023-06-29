@@ -84,6 +84,8 @@ select::-ms-expand {display: none;}
 .pbt20{padding-left:20px !important;padding-right:20px !important;}
 .vat{vertical-align:top !important;}
 
+.nobreak{white-space: nowrap !important;}
+
 .redimp{color:#ff0000 !important;}
 .redimp *{color:#ff0000 !important;}
 /* @media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0){
