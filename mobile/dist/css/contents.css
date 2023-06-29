@@ -432,7 +432,7 @@ select.dsel:disabled{background-color:#f7f7f7;color:#333333;;opacity:1;}
 	.inline_item.break_cell{flex:1;}
 }
 @media(max-width:359px){
-	
+	.unit_form_wrap.break_narrow{display:block;text-align: center;}
 }
 
 .btn_botpsm_w{text-align:right;margin:10px 0 0 0}
