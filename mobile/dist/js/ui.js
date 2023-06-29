@@ -126,8 +126,8 @@ function commonLayout() {
       setTimeout(function() {
         mobile_mainmenu_zone.classList.add("motion");
         if (touchstart) {
-          domBody.setAttribute("data-scr", window.pageYOffset);
-          domBody.style.marginTop = -window.pageYOffset + "px";
+          // domBody.setAttribute("data-scr", window.pageYOffset);
+          // domBody.style.marginTop = -window.pageYOffset + "px";
           domHtml.classList.add("touchDis");
         }
       }, 30);
@@ -138,8 +138,8 @@ function commonLayout() {
       setTimeout(function() {
         mobile_mainmenu_zone.classList.remove("active");
         domHtml.classList.remove("touchDis");
-        domBody.style.marginTop = 0;
-        window.scrollTo(0, parseInt(domBody.getAttribute("data-scr")));
+        // domBody.style.marginTop = 0;
+        // window.scrollTo(0, parseInt(domBody.getAttribute("data-scr")));
       }, 500);
     }
   }
@@ -179,8 +179,8 @@ function dimLayerShow(option){
     }
     function heightcheck(){
       if(touchIs){
-        console.log($(window).scrollTop());
-        $("body").data("data-scr",$(window).scrollTop()).css({"margin-top":-$(window).scrollTop()}).append($target);
+        //console.log($(window).scrollTop());
+        //$("body").data("data-scr",$(window).scrollTop()).css({"margin-top":-$(window).scrollTop()}).append($target);
         $("html").addClass("touchDis");
       }
     }
@@ -197,7 +197,7 @@ function dimLayerHide(option){
     $target.removeClass("active");
     $(".page_wrap").css({"z-index":""});
     $("html,body").removeClass("touchDis");
-    scrollEnd();
+    //scrollEnd();
     
     if("closeCallback" in option){
       option.closeCallback();

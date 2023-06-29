@@ -3,10 +3,217 @@
     @@include('./include/head.html')
     <body class="front_body">
         <div class="page_wrap">
-            @@include('./include/header.html')
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "출퇴근이력"
+            })
             <!-- middle -->
             <section class="middle_zone">
-                내용이 들어갑니다.
+                <div class="list_searchform_wrap">
+                    <div class="list_searchform_long">
+                        <div class="list_searchform_inwrap">
+                            <div class="searchform_inlong">
+                                <div class="unit_form_wrap break_narrow">
+                                    <div class="unit_form_cols">
+                                        <input type="date" class="searchform_input input_calendar">
+                                    </div>
+                                    <div class="unit_text_cols">
+                                        <span class="fvint_unit">~</span>
+                                    </div>
+                                    <div class="unit_form_cols">
+                                        <input type="date" class="searchform_input input_calendar">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="list_searchform_short">
+                        <a href="#" class="btn_searchform_submit"><span class="hdtext">검색</span></a>
+                    </div> -->
+                </div>
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row dtype2">
+                                <p class="form_field_title">출퇴근 현황</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <!-- 내용이 들어갑니다. -->
+                                <style>
+                                    /* cell width 조절 */
+                                    [name='commute_table'] .ctb_wid01 {width: 25px;}
+                                    [name='commute_table'] .ctb_wid02 {width: 30%;}
+                                    [name='commute_table'] .ctb_wid03 {}
+            
+            
+                                    /* 작은사이즈 폰 767 이하 */
+                                    @media(max-width:767px) {
+                                        [name='welfare_table'] .ctb_wid03 {
+                                            width: 16%;
+                                        }
+            
+                                        [name='welfare_table'] .ctb_wid04 {
+                                            width: 14%;
+                                        }
+            
+                                        [name='welfare_table'] .ctb_wid05 {
+                                            width: 14%;
+                                        }
+                                    }
+            
+                                    @media(max-width:359px) {
+                                        [name='welfare_table'] .ctb_wid03 {
+                                            width: 13%;
+                                        }
+            
+                                        [name='welfare_table'] .ctb_wid04 {
+                                            width: 13%;
+                                        }
+            
+                                        [name='welfare_table'] .ctb_wid05 {
+                                            width: 13%;
+                                        }
+                                    }
+                                </style>
+                                <div class="data_tb_z" name="commute_table" data-scrollrow="7">
+                                    <div class="data_tb_w define_thead">
+                                        <table class="data_tb type2">
+                                            <thead>
+                                                <tr>
+                                                    <th class="ctb_wid01 has_wpsp has_ico"><span class="d_wpsp">선택</span></th>
+                                                    <th class="ctb_wid02 has_norsp"><span class="d_norsp">근무일자</span></th>
+                                                    <th class="ctb_wid03 has_norsp"><span class="d_norsp">근무조</span></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="data_tb_w define_tbody">
+                                        <table class="data_tb type2">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="ctb_wid01 has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="ctb_wid02 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                    <td class="ctb_wid03 has_norsp"><span class="d_norsp">2교대A조</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01 has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="ctb_wid02 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                    <td class="ctb_wid03 has_norsp"><span class="d_norsp">2교대A조</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01 has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="ctb_wid02 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                    <td class="ctb_wid03 has_norsp"><span class="d_norsp">2교대A조</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01 has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="ctb_wid02 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                    <td class="ctb_wid03 has_norsp"><span class="d_norsp">2교대A조</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01 has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="ctb_wid02 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                    <td class="ctb_wid03 has_norsp"><span class="d_norsp">2교대A조</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01 has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="ctb_wid02 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                    <td class="ctb_wid03 has_norsp"><span class="d_norsp">2교대A조</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01 has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="ctb_wid02 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                    <td class="ctb_wid03 has_norsp"><span class="d_norsp">2교대A조</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01 has_wpsp has_ico">
+                                                        <input type="checkbox" class="rdchk">
+                                                    </td>
+                                                    <td class="ctb_wid02 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                    <td class="ctb_wid03 has_norsp"><span class="d_norsp">2교대A조</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- // 내용이 들어갑니다. -->
+                                <script>
+                                    window.addEventListener("load", () => {
+                                        // scroll table
+                                        scrollTable();
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">출퇴근 상세</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="fvtb_w dtype4">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">성명</span></th>
+                                                <td><input type="text" class="fvint" readonly value="곽훈도"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">근무조조</span></th>
+                                                <td><input type="text" class="fvint" readonly value="로엑스"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">츨근<br>순번/시간</span></th>
+                                                <td>
+                                                    <div class="unit_form_wrap break_narrow">
+                                                        <div class="unit_form_cols wid_short30">
+                                                            <input type="text" class="fvint acenter" value="1" readonly>
+                                                        </div>
+                                                        <div class="unit_text_cols">
+                                                            <span class="fvint_unit">~</span>
+                                                        </div>
+                                                        <div class="unit_form_cols">
+                                                            <input type="time" class="input_time" value="18:00" readonly>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">퇴근 익일</span></th>
+                                                <td><input type="checkbox" class="rdchk"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">퇴근 시간</span></th>
+                                                <td><input type="time" class="input_time" value="18:00" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">등록구분</span></th>
+                                                <td><input type="text" class="fvint" readonly value="데비스"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">비고</span></th>
+                                                <td><input type="text" class="fvint" readonly></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- // middle -->
         </div>

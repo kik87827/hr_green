@@ -267,6 +267,7 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .form_field_title_row{border-bottom:1px solid #626262;position:relative;padding-bottom:8px;display:flex;justify-content: space-between;}
 .form_field_title_row.align_type2{align-items: flex-end;}
 .form_field_title_row .btn_form_more{}
+.form_field_title_row.dtype2{border-bottom:0;}
 .form_field_title{font-size: 14px;color: #000;font-family: 'NotoSans-Medium';}
 .btn_form_more{display:block;width:20px;height:20px;background:#fcfcfc;box-sizing: border-box;}
 .btn_form_more:before,
@@ -360,6 +361,7 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .inblock_item_group{}
 .inblock_item{margin-bottom:5px;}
 .inblock_item:last-of-type{margin-bottom:0;}
+.inblock_item.no_gap{font-size:0;}
 
 .inform_item_fxwrap{display:flex;gap:10px;align-items: center;}
 .inform_item_fxwrap.hor_align{justify-content: space-between;}
@@ -372,6 +374,10 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .inform_item.flex_item_right{display:flex;justify-content: flex-end;}
 .unit_form_wrap{display:flex;align-items: center;gap:10px;}
 .unit_form_cols{flex:1;min-width:0;}
+.unit_form_cols.wid_short10{flex:0 0 10%;}
+.unit_form_cols.wid_short20{flex:0 0 20%;}
+.unit_form_cols.wid_short30{flex:0 0 30%;}
+.unit_form_cols.wid_short40{flex:0 0 40%;}
 .unit_form_cols > *{width:100%;}
 .unit_text_cols{flex:0;white-space: nowrap;}
 .fvint_unit{font-size:12px;color:#2b2b2b;}
@@ -775,6 +781,7 @@ input.input_calendar{border:1px solid #d5d5d5;border-radius:4px;height:30px;padd
 	-moz-appearance: none;
 	-ms-appearance: none;outline:0;
 }
+input.input_calendar.searchform_input{background-size:32px auto;padding-right:32px;}
 input::-webkit-date-and-time-value{ text-align:left; }
 input.input_calendar::-webkit-calendar-picker-indicator {
 display: none;
@@ -787,7 +794,7 @@ text-align: left;
 input.input_calendar:focus{border-color:#000;}
 
 input.input_calendar:disabled,
-input.input_calendar:read-only{background:#f7f7f7;color:#999999;opacity:1;}
+input.input_calendar:read-only{background-color:#f7f7f7;color:#333333;opacity:1;}
 
 input.input_time{border:1px solid #d5d5d5;border-radius:4px;height:30px;padding:0 30px 0 10px;line-height:1;box-sizing:border-box;width:100%;font-size:12px;color:#2b2b2b;font-family: 'NotoSans-Regular';background:#fff url("../images/ico_text_time.png") no-repeat 100% 50%/30px auto;
 	-webkit-appearance: none;
@@ -806,7 +813,7 @@ text-align: left;
 input.input_time:focus{border-color:#000;}
 
 input.input_time:disabled,
-input.input_time:read-only{background:#f7f7f7;color:#999999;opacity:1;}
+input.input_time:read-only{background-color:#f7f7f7;color:#333333;opacity:1;}
 
 
 
@@ -931,13 +938,15 @@ select.form_select:disabled{background-color:#f7f7f7;color:#333333;opacity:1;}
 .btn_formcontrol.ico_search{}
 .btn_formcontrol.ico_refresh{background-position:0 100%;}
 .list_searchform_wrap{border-top:1px solid #626262;border-bottom:1px solid #cacaca;padding:12px 15px;display:flex;gap:10px;align-items: center;}
-.list_searchform_long{flex:1;}
+.list_searchform_long{flex:1;display:flex;align-items: center;min-width:0;}
+.list_searchform_long > *{width:100%;}
 .list_searchform_short{flex:0 0 36px;}
 .list_searchform_inwrap{display:flex;align-items: center;gap:10px;}
 .searchform_inshort{flex:0 0 30%;}
 .searchform_inshort .form_select{}
-.searchform_inlong{flex:1;}
+.searchform_inlong{flex:1;min-width:0;}
 .searchform_inlong .searchform_input{}
+
 input.searchform_input{width:100%;border-radius:4px;color:#333333;border:1px solid #d5d5d5;font-size:14px;height: 36px;padding: 0 14px;box-sizing:border-box;font-family:'NotoSans-Regular';line-height:1;}
 .btn_searchform_submit{border-radius:100%;display:block;width:36px;height:36px;background:#00448d url("../images/ico_form_search_w.png") no-repeat 0 0/100% auto;}
 
@@ -988,6 +997,7 @@ input.searchform_input{width:100%;border-radius:4px;color:#333333;border:1px sol
 
 @media (max-width:374px){
 	.nbr2{display:block !important;}
+	.list_searchform_wrap .unit_form_wrap{gap:5px;}
 }
 @media (max-width:359px){
 	.nbr{display:block !important;}
