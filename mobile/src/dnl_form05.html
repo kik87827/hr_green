@@ -3,12 +3,201 @@
     @@include('./include/head.html')
     <body class="front_body">
         <div class="page_wrap">
-            @@include('./include/header.html')
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "연차촉진계획신청"
+            })
             <!-- middle -->
             <section class="middle_zone">
-                내용이 들어갑니다.
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">결재라인</p>
+                                <button type="button" class="btn_form_more" id="btn_form_more"></button>
+                            </div>
+                            <div class="form_field_content_row type2">
+                                <div class="field_content_item">
+                                    <p class="field_content_title">작성부서</p>
+                                    <div class="field_content_data_wrap">
+                                        <ul class="field_data_form">
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">곽훈도(과장/6급)</div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="field_content_item">
+                                    <p class="field_content_title">처리부서</p>
+                                    <div class="field_content_data_wrap">
+                                        <ul class="field_data_form">
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">진상인(과장/6급)</div></div>
+                                            </li>
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">홍길동(팀장/5급)</div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">연차촉진정보</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="tail_field_item">
+                                    <div class="tail_field_title_row">
+                                        <p class="tail_field_title">연차촉진정보(기준 일수)</p>
+                                        <button type="button" class="btn_form_more" data-target="#tail_content_data"></button>
+                                    </div>  
+                                    <div class="tail_field_content_row" id="tail_content_data">
+                                        <div class="data_fvtb_wrap">
+                                            <table class="data_fvtb">
+                                                <tr>
+                                                    <th><span class="data_fvtb_label">계획구분</span></th>
+                                                    <td><input type="text" class="fvint" value="2020.09 연차사용계획촉구"></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <style>
+                                            table[name="rest_summary_tb"] .ctb_wid01{}
+                                            table[name="rest_summary_tb"] .ctb_wid02{width:23%;}
+                                            table[name="rest_summary_tb"] .ctb_wid03{width:23%;}
+                                            table[name="rest_summary_tb"] .ctb_wid04{width:23%;}
+                                        </style>
+                                        <div class="data_tb_w">
+                                            <table class="data_tb type5" name="rest_summary_tb">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="ctb_wid01"><span class="data_thtext">발생</span></th>
+                                                        <th class="ctb_wid02"><span class="data_thtext">사용</span></th>
+                                                        <th class="ctb_wid03"><span class="data_thtext">대상</span></th>
+                                                        <th class="ctb_wid04"><span class="data_thtext">계획</span></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="ctb_wid01"><span class="d_norsp">15</span></td>
+                                                        <td class="ctb_wid02"><span class="d_norsp">7</span></td>
+                                                        <td class="ctb_wid03"><span class="d_norsp">3</span></td>
+                                                        <td class="ctb_wid04"><span class="d_norsp">3</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tail_field_item">
+                                    <style>
+                                        table[name="rest_detail_tb"] .ctb_wid01{width:30px;}
+                                        table[name="rest_detail_tb"] .ctb_wid02{width:27%;}
+                                        table[name="rest_detail_tb"] .ctb_wid03{width:27%;}
+                                        table[name="rest_detail_tb"] .ctb_wid04{}
+                                    </style>
+                                    <div class="data_tb_w">
+                                        <table class="data_tb type5" name="rest_detail_tb">
+                                            <thead>
+                                                <tr>
+                                                    <th class="ctb_wid01"><span class="data_thtext">번호</span></th>
+                                                    <th class="ctb_wid02"><span class="data_thtext">계획일자</span></th>
+                                                    <th class="ctb_wid03"><span class="data_thtext">근태종류</span></th>
+                                                    <th class="ctb_wid04"><span class="data_thtext">일수</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="ctb_wid01"><span class="d_norsp">1</span></td>
+                                                    <td class="ctb_wid02"><span class="d_norsp">2020.09.02</span></td>
+                                                    <td class="ctb_wid03"><span class="d_norsp">연차</span></td>
+                                                    <td class="ctb_wid04"><span class="d_norsp">1.0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01"><span class="d_norsp">2</span></td>
+                                                    <td class="ctb_wid02"><span class="d_norsp">2020.09.02</span></td>
+                                                    <td class="ctb_wid03"><span class="d_norsp">연차</span></td>
+                                                    <td class="ctb_wid04"><span class="d_norsp">1.0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01"><span class="d_norsp">3</span></td>
+                                                    <td class="ctb_wid02"><span class="d_norsp">2020.09.02</span></td>
+                                                    <td class="ctb_wid03"><span class="d_norsp">연차</span></td>
+                                                    <td class="ctb_wid04"><span class="d_norsp">1.0</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ctb_wid01"><span class="d_norsp">4</span></td>
+                                                    <td class="ctb_wid02"><span class="d_norsp">2020.09.02</span></td>
+                                                    <td class="ctb_wid03"><span class="d_norsp">연차</span></td>
+                                                    <td class="ctb_wid04"><span class="d_norsp">1.0</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="btn_data_control_wrap">
+                                        <a href="#" class="btn_data_control">입력</a>
+                                        <a href="#" class="btn_data_control">삭제</a>
+                                    </div>
+                                </div>
+                                <div class="tail_field_item">
+                                    <div class="fvtb_w dtype4">
+                                        <table class="fvtb">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                                    <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="has_fvth_sp"><span class="fvth_sp">계획일자</span></th>
+                                                    <td><input type="date" class="input_calendar" style="width:50%"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="has_fvth_sp"><span class="fvth_sp">근태종류</span></th>
+                                                    <td>
+                                                        <select class="dsel" style="width:50%">
+                                                            <option>연차휴가</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="has_fvth_sp"><span class="fvth_sp">휴가일수</span></th>
+                                                    <td> <input type="text" class="fvint acenter" value="1" style="width:30%"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_fsm_w">
+                        <a href="javascript:;" class="btn_fsm">결재요청</a>
+                    </div>
+                </div>
             </section>
             <!-- // middle -->
         </div>
+
+        @@include('./include/sign_popup.html')
+
+        <script>
+            // 퍼블확인용
+            let url = window.location.href.split('?')[1];
+            let url_2 = url !== undefined ? url.split('#')[0] : null;
+            if(url_2 === "popup"){
+                dimLayerShow({ target : "#sign_layer"});
+            }
+            
+
+            document.querySelector("#btn_form_more").addEventListener("click",()=>{
+                dimLayerShow({ target : "#sign_layer"});
+            });
+
+            toggleFunc();
+        </script>
+
     </body>
 </html>

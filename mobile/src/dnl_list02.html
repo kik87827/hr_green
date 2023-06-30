@@ -3,10 +3,141 @@
     @@include('./include/head.html')
     <body class="front_body">
         <div class="page_wrap">
-            @@include('./include/header.html')
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "연차/연중 현황조회"
+            })
             <!-- middle -->
             <section class="middle_zone">
-                내용이 들어갑니다.
+                <div class="list_searchform_wrap">
+                    <div class="list_searchform_long">
+                        <div class="list_searchform_inwrap">
+                            <div class="searchform_inlong">
+                                <div class="unit_form_wrap break_narrow">
+                                    <div class="unit_form_cols wid_short40">
+                                        <select class="dsel medium_size">
+                                            <option>전체</option>
+                                            <option>연중</option>
+                                            <option>연차</option>
+                                            <option>대체</option>
+                                        </select>
+                                    </div>
+                                    <div class="unit_form_cols">
+                                        <input type="date" class="searchform_input input_calendar">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="list_searchform_short">
+                        <a href="#" class="btn_searchform_submit"><span class="hdtext">검색</span></a>
+                    </div> -->
+                </div>
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row dtype2">
+                                <p class="form_field_title">나의 연중휴가</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="keycount_item_list">
+                                    <div class="keycount_cols">
+                                        <div class="keycount_item">
+                                            <span class="keycount_label">발생</span>
+                                            <div class="keycount_value_g">
+                                                <span class="keycount_value_text">0</span>
+                                                <span class="keycount_value_unit">일</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="keycount_cols">
+                                        <div class="keycount_item">
+                                            <span class="keycount_label">사용</span>
+                                            <div class="keycount_value_g">
+                                                <span class="keycount_value_text">0</span>
+                                                <span class="keycount_value_unit">일</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="keycount_cols">
+                                        <div class="keycount_item">
+                                            <span class="keycount_label">신청</span>
+                                            <div class="keycount_value_g">
+                                                <span class="keycount_value_text">0</span>
+                                                <span class="keycount_value_unit">일</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="keycount_cols">
+                                        <div class="keycount_item">
+                                            <span class="keycount_label">잔여</span>
+                                            <div class="keycount_value_g">
+                                                <span class="keycount_value_text">0</span>
+                                                <span class="keycount_value_unit">일</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <style>
+                                    table[name="restdata_tb"] .date_wid{width:30%}
+                                    table[name="restdata_tb"] .type_wid{}
+                                    table[name="restdata_tb"] .count_wid{width:15%}
+                                </style>
+                                <div class="tbsk_tb_w">
+                                    <table class="tbsk_tb" name="restdata_tb">
+                                        <thead>
+                                            <tr>
+                                                <th class="date_wid">시작일자</th>
+                                                <th class="date_wid">종료일자</th>
+                                                <th class="type_wid">휴가유형</th>
+                                                <th class="count_wid">일수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="type_wid"><span class="tb_data">연차휴가</span></td>
+                                                <td class="count_wid"><span class="tb_data">1</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="type_wid"><span class="tb_data">연차휴가</span></td>
+                                                <td class="count_wid"><span class="tb_data">1</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="type_wid"><span class="tb_data">연차휴가</span></td>
+                                                <td class="count_wid"><span class="tb_data">1</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="type_wid"><span class="tb_data">연차휴가</span></td>
+                                                <td class="count_wid"><span class="tb_data">1</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="type_wid"><span class="tb_data">연차휴가</span></td>
+                                                <td class="count_wid"><span class="tb_data">1</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="date_wid"><span class="tb_data">2023.01.11</span></td>
+                                                <td class="type_wid"><span class="tb_data">연차휴가</span></td>
+                                                <td class="count_wid"><span class="tb_data">1</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- // middle -->
         </div>

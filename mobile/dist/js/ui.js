@@ -41,11 +41,15 @@ function scrollTable(){
       const thisObj = element;
       let datarow = thisObj.getAttribute("data-scrollrow");
       const thisHead = thisObj.querySelector(".define_thead");
+      const thisFoot = thisObj.querySelector(".define_tfoot");
       const thisBody = thisObj.querySelector(".define_tbody");
       const targetRow = thisBody.querySelectorAll("tr")[datarow];
       let scrollWid = getScrollBarWidth();
       if(targetRow !== undefined && thisHead !== null){
         thisBody.style.maxHeight = targetRow.offsetTop + "px";
+        if(!!thisFoot){
+          thisFoot.style.paddingRight = `${scrollWid}px`;
+        }
         thisHead.style.paddingRight = `${scrollWid}px`;
       }
     });

@@ -3,12 +3,171 @@
     @@include('./include/head.html')
     <body class="front_body">
         <div class="page_wrap">
-            @@include('./include/header.html')
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "개인 월별근부현황"
+            })
             <!-- middle -->
             <section class="middle_zone">
-                내용이 들어갑니다.
+                <div class="form_field_item_zone">
+                    <div class="fvtb_w type3 fvsearch_form">
+                        <table class="fvtb">
+                            <tbody>
+                                <tr>
+                                    <th class="has_fvth_sp"><span class="fvth_sp imp">조회년월</span></th>
+                                    <td class="has_fitem">
+                                        <input type="date" class="input_calendar">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <style>
+                                /* cell width 조절 */
+                                [name='month_work_table'] .ctb_wid01{width:20%;}
+                                [name='month_work_table'] .ctb_wid02{}
+                                [name='month_work_table'] .ctb_wid03{}
+                                [name='month_work_table'] .ctb_wid04{}
+                                [name='month_work_table'] .ctb_wid05{}
+                            </style>
+                            <div class="data_tb_z ptype2" name="month_work_table" data-scrollrow="7">
+                                <div class="data_tb_w define_thead">
+                                    <table class="data_tb type2">
+                                        <thead>
+                                            <tr>
+                                                <th class="ctb_wid01 has_norsp"><span class="d_norsp">근무일</span></th>
+                                                <th class="ctb_wid02 has_norsp"><span class="d_norsp">정취</span></th>
+                                                <th class="ctb_wid03 has_norsp"><span class="d_norsp">연장</span></th>
+                                                <th class="ctb_wid04 has_norsp"><span class="d_norsp">휴일</span></th>
+                                                <th class="ctb_wid05 has_norsp type2"><span class="d_norsp">휴일<br>연장</span></th>
+                                                <th class="ctb_wid06 has_norsp"><span class="d_norsp">야간</span></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="data_tb_w define_tbody">
+                                    <table class="data_tb type2">
+                                        <tbody>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">연차</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">1.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">연차</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">1.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">연차</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">1.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">연차</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">1.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">연차</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">1.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">연차</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">1.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">연차</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">1.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">연차</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">1.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">2022.08.30</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">연차</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">1.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">8.0</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="data_tb_w define_tfoot">
+                                    <table class="data_tb type2">
+                                        <tbody>
+                                            <tr>
+                                                <td class="ctb_wid01 has_norsp"><span class="d_norsp">합산</span></td>
+                                                <td class="ctb_wid02 has_norsp"><span class="d_norsp">120.0</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">14.00</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">0.00</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">0.00</span></td>
+                                                <td class="ctb_wid03 has_norsp"><span class="d_norsp">0.00</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_item_wrap">
+                        <div class="bottom_item_cols"><input type="checkbox" class="rdchk"></div>
+                        <div class="bottom_item_cols">
+                            <a href="#" class="btn_submit_box">
+                                <i class="ico ico_check"></i>
+                                <span class="submit_box_text">확인완료</span>
+                            </a>
+                        </div>
+                    </div>  
+                </div>
             </section>
+            <script>
+                window.addEventListener("load", () => {
+                    // scroll table
+                    scrollTable();
+                });
+            </script>
             <!-- // middle -->
         </div>
+
+
+        <script>
+            // 퍼블확인용
+            let url = window.location.href.split('?')[1];
+            let url_2 = url !== undefined ? url.split('#')[0] : null;
+        </script>
+
     </body>
 </html>
