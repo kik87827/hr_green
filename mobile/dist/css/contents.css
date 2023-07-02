@@ -226,6 +226,7 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .fvtb tbody td{}
 .fvtb tbody td.type2{padding:0;}
 .fvtb tbody th.ptype2{padding-top:0;padding-bottom:0;}
+.fvtb tbody th.ptype3{padding-top:5px;padding-bottom:5px;}
 .fvtb tbody th.txtcenter .fvth_sp2{padding:0;}
 .fvtb tbody th.align_type2{vertical-align: top;padding-top:13px;}
 .fvtb tbody td.has_fitem{padding:7.5px 11.5px;font-size:0;line-height:0;}
@@ -840,7 +841,7 @@ input.input_time:focus{border-color:#000;}
 input.input_time:disabled,
 input.input_time:read-only{background-color:#f7f7f7;color:#333333;opacity:1;border-color:#d5d5d5;}
 
-
+.half_wid{width:50% !important;min-width:113px !important;}
 
 
 .space_both_row{position:relative;text-align: center;margin-bottom:5px;}

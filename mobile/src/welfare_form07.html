@@ -3,12 +3,258 @@
     @@include('./include/head.html')
     <body class="front_body">
         <div class="page_wrap">
-            @@include('./include/header.html')
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "차량구입지원신청"
+            })
             <!-- middle -->
             <section class="middle_zone">
-                내용이 들어갑니다.
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">결재라인</p>
+                                <button type="button" class="btn_form_more" id="btn_form_more"></button>
+                            </div>
+                            <div class="form_field_content_row type2">
+                                <div class="field_content_item">
+                                    <p class="field_content_title">작성부서</p>
+                                    <div class="field_content_data_wrap">
+                                        <ul class="field_data_form">
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">곽훈도(과장/6급)</div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="field_content_item">
+                                    <p class="field_content_title">처리부서</p>
+                                    <div class="field_content_data_wrap">
+                                        <ul class="field_data_form">
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">진상인(과장/6급)</div></div>
+                                            </li>
+                                            <li>
+                                                <div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+                                                <div class="field_data_tdcols"><div class="field_data_value">홍길동(팀장/5급)</div></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">신청내용</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="fvtb_w dtype4">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                                <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">부서명</span></th>
+                                                <td><input type="text" class="fvint" readonly value="인사팀"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">직위</span></th>
+                                                <td><input type="text" class="fvint" readonly value="책임매니저"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">근속년수</span></th>
+                                                <td><input type="text" class="fvint" readonly value="5년"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">신청구분</span></th>
+                                                <td>
+                                                    <select class="dsel">
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">신청일자</span></th>
+                                                <td><input type="date" class="input_calendar half_wid" readonly value="2023-05-30"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp">신청사유</span></th>
+                                                <td><input type="text" class="fvint"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">소유자(등록자)정보</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="fvtb_w dtype4">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">소유자</span></th>
+                                                <td><input type="text" class="fvint" readonly value="홍길순"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">관계</span></th>
+                                                <td>
+                                                    <select class="dsel">
+                                                        <option>배우자</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">생년월일</span></th>
+                                                <td><input type="date" class="input_calendar half_wid" readonly value="2023-05-30"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">주소</span></th>
+                                                <td><input type="text" class="fvint" value="충북 충주시 대소원면 기업도시1로 69"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">차량정보</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="fvtb_w dtype4">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">제조사</span></th>
+                                                <td><input type="text" class="fvint" value="현대자동차"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">차량구분</span></th>
+                                                <td>
+                                                    <select class="dsel">
+                                                        <option>내연기관</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">차종</span></th>
+                                                <td>
+                                                    <select class="dsel">
+                                                        <option>팰리세이드</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp ptype3"><span class="fvth_sp imp">차량출고일<br>(세금계산서<br>발행일)</span></th>
+                                                <td><input type="date" class="input_calendar half_wid" value="2023-04-25"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">차량구입대상<br>확인서 발급일</span></th>
+                                                <td><input type="date" class="input_calendar half_wid" value="2023-04-24"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">차량구입가</span></th>
+                                                <td><input type="text" class="fvint" value="50,000,000"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_field_item">
+                            <div class="form_field_title_row">
+                                <p class="form_field_title">지원금액</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="fvtb_w dtype4">
+                                    <table class="fvtb">
+                                        <tbody>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">지원율</span></th>
+                                                <td><input type="text" class="fvint"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">지원금액</span></th>
+                                                <td><input type="text" class="fvint"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="has_fvth_sp"><span class="fvth_sp imp">지원일</span></th>
+                                                <td><input type="text" class="fvint" value="신청서 접수 후 다음 급여 지급 시 포함지급."></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_fsm_w">
+                        <div class="btn_fsm_fxwrap">
+                            <a href="javascript:;" data-toggle="#file_form5" class="btn_fsm type2 d_type2"><span class="toggle_ico"></span><span class="toggle_text">첨부파일</span></a>
+                            <a href="javascript:;" class="btn_fsm">결재요청</a>
+                        </div>
+                    </div>
+                    <div class="file_form_group toggle_item" id="file_form5">
+                        <div class="fileui_tb_w">
+                            <div class="fileui_tb">
+                                <div class="fileui_td has_btn">
+                                    <div class="fkef_tb2_w">
+                                        <input type="file" class="fkef_file">
+                                        <a href="javascript:;" class="btn_fakefile">파일 선택</a>
+                                    </div>
+                                </div>
+                                <div class="fileui_td">
+                                    <div class="filename_para">선택된 파일 없음</div>
+                                </div>
+                                <div class="fileui_td has_btn">
+                                    <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tbsk_tb_w">
+                            <table class="tbsk_tb">
+                                <thead>
+                                    <tr>
+                                        <th class="ctb2_w01">파일명</th>
+                                        <th class="ctb2_w02">용량</th>
+                                        <th class="ctb2_w03">삭제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="has_data">첨부파일.jpg</td>
+                                        <td>14KB</td>
+                                        <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- // middle -->
         </div>
+
+        @@include('./include/sign_popup.html')
+
+        <script>
+            // 퍼블확인용
+            let url = window.location.href.split('?')[1];
+            let url_2 = url !== undefined ? url.split('#')[0] : null;
+            if(url_2 === "popup"){
+                dimLayerShow({ target : "#sign_layer"});
+            }
+
+            document.querySelector("#btn_form_more").addEventListener("click",()=>{
+                dimLayerShow({ target : "#sign_layer"});
+            });
+        </script>
     </body>
 </html>
