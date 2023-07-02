@@ -14,11 +14,16 @@
 	<title>H그린파워 HR시스템</title>
 </head>
 
+
 <body class="front_body">
 	<div class="page_wrap">
-		<!-- header -->
-		<header class="header_zone type2">
-			<h1 class="header_main_imgtitle"><a href="#" class="header_main_imglogo"><img src="./images/toplogo.png" alt="HGREEN POWER"></a></h1>
+		<header class="header_zone">
+			<div class="header_icomenu_g">
+				<a href="#" class="header_icomenu ico_home"><span class="hdtext">홈</span></a>
+			</div>
+
+			<h1 class="header_sub_title">정산보험료 분할납부 신청</h1>
+
 			<a href="#" class="btn_mobile_menu">
 				<div class="btn_mobile_menu_obj"></div>
 				<span class="hdtext">전체메뉴 열기</span>
@@ -64,14 +69,120 @@
 			</div>
 			<!-- // mobile_menu -->
 		</header>
-		<!-- // header -->
-
 		<!-- middle -->
 		<section class="middle_zone">
-			내용이 들어갑니다.
+			<div class="form_field_item_zone">
+				<div class="form_field_item_group">
+					<div class="form_field_item">
+						<div class="form_field_title_row">
+							<p class="form_field_title">결재라인</p>
+							<button type="button" class="btn_form_more" id="btn_form_more"></button>
+						</div>
+						<div class="form_field_content_row type2">
+							<div class="field_content_item">
+								<p class="field_content_title">작성부서</p>
+								<div class="field_content_data_wrap">
+									<ul class="field_data_form">
+										<li>
+											<div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+											<div class="field_data_tdcols">
+												<div class="field_data_value">곽훈도(과장/6급)</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="field_content_item">
+								<p class="field_content_title">처리부서</p>
+								<div class="field_content_data_wrap">
+									<ul class="field_data_form">
+										<li>
+											<div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+											<div class="field_data_tdcols">
+												<div class="field_data_value">진상인(과장/6급)</div>
+											</div>
+										</li>
+										<li>
+											<div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+											<div class="field_data_tdcols">
+												<div class="field_data_value">홍길동(팀장/5급)</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_field_item">
+						<div class="form_field_title_row">
+							<p class="form_field_title">신청내역</p>
+						</div>
+						<div class="form_field_content_row">
+							<ul class="imptext_list mt_10">
+								<li>신청 승인 후 확정시 변경신청이 불가능 합니다.</li>
+								<li>담당자에게 문의하세요.</li>
+							</ul>
+							<div class="fvtb_w elsetb dtype4 mt_10">
+								<table class="fvtb">
+									<tbody>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+											<td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">정산년도</span></th>
+											<td><input type="text" class="fvint" value="2023"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp ptype2"><span class="fvth_sp">정산보험료<br>(건강)</span>
+											</th>
+											<td><input type="text" class="fvint" value="100,000"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp ptype2"><span class="fvth_sp">정산보험료<br>(장기)</span>
+											</th>
+											<td><input type="text" class="fvint" value="100,000"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp ptype2"><span class="fvth_sp imp">분할납부 <br>개월수</span>
+											</th>
+											<td>
+												<select class="dsel">
+													<option>5</option>
+												</select>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn_fsm_w">
+					<a href="javascript:;" class="btn_fsm">결재요청</a>
+				</div>
+			</div>
 		</section>
 		<!-- // middle -->
 	</div>
+
+	<script>
+		// 퍼블확인용
+		let url = window.location.href.split('?')[1];
+		let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+		if (url_2 === "popup") {
+			dimLayerShow({
+				target: "#sign_layer"
+			});
+		}
+
+		document.querySelector("#btn_form_more").addEventListener("click", () => {
+			dimLayerShow({
+				target: "#sign_layer"
+			});
+		});
+	</script>
 </body>
 
 </html>

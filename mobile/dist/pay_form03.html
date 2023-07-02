@@ -14,11 +14,16 @@
 	<title>H그린파워 HR시스템</title>
 </head>
 
+
 <body class="front_body">
 	<div class="page_wrap">
-		<!-- header -->
-		<header class="header_zone type2">
-			<h1 class="header_main_imgtitle"><a href="#" class="header_main_imglogo"><img src="./images/toplogo.png" alt="HGREEN POWER"></a></h1>
+		<header class="header_zone">
+			<div class="header_icomenu_g">
+				<a href="#" class="header_icomenu ico_home"><span class="hdtext">홈</span></a>
+			</div>
+
+			<h1 class="header_sub_title">피부양자(변경) 신청</h1>
+
 			<a href="#" class="btn_mobile_menu">
 				<div class="btn_mobile_menu_obj"></div>
 				<span class="hdtext">전체메뉴 열기</span>
@@ -64,14 +69,221 @@
 			</div>
 			<!-- // mobile_menu -->
 		</header>
-		<!-- // header -->
-
 		<!-- middle -->
 		<section class="middle_zone">
-			내용이 들어갑니다.
+			<div class="form_field_item_zone">
+				<div class="form_field_item_group">
+					<div class="form_field_item">
+						<div class="form_field_title_row">
+							<p class="form_field_title">결재라인</p>
+							<button type="button" class="btn_form_more" id="btn_form_more"></button>
+						</div>
+						<div class="form_field_content_row type2">
+							<div class="field_content_item">
+								<p class="field_content_title">작성부서</p>
+								<div class="field_content_data_wrap">
+									<ul class="field_data_form">
+										<li>
+											<div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+											<div class="field_data_tdcols">
+												<div class="field_data_value">곽훈도(과장/6급)</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="field_content_item">
+								<p class="field_content_title">처리부서</p>
+								<div class="field_content_data_wrap">
+									<ul class="field_data_form">
+										<li>
+											<div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+											<div class="field_data_tdcols">
+												<div class="field_data_value">진상인(과장/6급)</div>
+											</div>
+										</li>
+										<li>
+											<div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+											<div class="field_data_tdcols">
+												<div class="field_data_value">홍길동(팀장/5급)</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_field_item">
+						<div class="form_field_title_row">
+							<p class="form_field_title">신청내역</p>
+							<a href="#" class="btn_control_box" id="btn_family_call">
+								<span class="control_box_text">가족선택</span>
+							</a>
+						</div>
+						<div class="form_field_content_row">
+							<ul class="imptext_list mt_10">
+								<li>신청전 인사시스템에 가족사항이 등록되어 있어야 합니다.</li>
+								<li>모바일에서는 피부양자를 1명씩만 신청이 가능합니다.</li>
+								<li>진행중인 결재건이 있으면 추가신청이 불가능합니다.</li>
+							</ul>
+							<div class="fvtb_w elsetb dtype4 mt_10">
+								<table class="fvtb">
+									<tbody>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+											<td><input type="text" class="fvint" readonly value="홍길동(0241)"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">부서명</span></th>
+											<td><input type="text" class="fvint" readonly value="인사팀"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">직위</span></th>
+											<td><input type="text" class="fvint" readonly value="책임매니저"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp">가족명</span></th>
+											<td><input type="text" class="fvint" readonly value="홍아들/남/자녀"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp"><span class="fvth_sp imp">신청일자</span></th>
+											<td>
+												<input type="date" class="input_calendar half_wid" readonly value="2023-05-30">
+											</td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp ptype3">
+												<span class="fvth_sp imp">피부양자여부<br>(건강보험)</span>
+											</th>
+											<td><input type="checkbox" class="rdchk"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp ptype3">
+												<span class="fvth_sp imp">소득세<br>공제여부</span>
+											</th>
+											<td><input type="checkbox" class="rdchk"></td>
+										</tr>
+										<tr>
+											<th class="has_fvth_sp ptype3">
+												<span class="fvth_sp imp">의료비<br>신청여부</span>
+											</th>
+											<td><input type="checkbox" class="rdchk"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn_fsm_w">
+					<a href="javascript:;" class="btn_fsm">결재요청</a>
+				</div>
+			</div>
 		</section>
 		<!-- // middle -->
 	</div>
+
+	<!-- layer -->
+	<div class="dlayer_w" id="family_layer">
+		<div class="dlayer_bg"></div>
+		<div class="dlayer_box">
+			<div class="dlayer_tit_low">
+				<h2 class="dlayer_tit">가족사항</h2>
+			</div>
+			<div class="dlayer_cont_low">
+				<div class="scroll_tb_zone">
+					<div class="data_tb_w">
+						<table class="data_tb narrow_data_tb">
+							<thead>
+								<tr>
+									<th><span class="data_thtext">번호</span></th>
+									<th><span class="data_thtext">선택</span></th>
+									<th><span class="data_thtext">성명</span></th>
+									<th><span class="data_thtext">가족<br>관계</span></th>
+									<th><span class="data_thtext">주민번호</span></th>
+									<th><span class="data_thtext">성별</span></th>
+									<th><span class="data_thtext">피부양자여부<br>(건강보험)</span></th>
+									<th><span class="data_thtext">소득<br>공제</span></th>
+									<th><span class="data_thtext">의료비<br>신청</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span class="d_norsp">1</span></td>
+									<td><input type="checkbox" class="rdchk"></td>
+									<td><span class="d_norsp">홍길동</span></td>
+									<td><span class="d_norsp">부</span></td>
+									<td><span class="d_norsp">000000-0000000</span></td>
+									<td><span class="d_norsp">남</span></td>
+									<td><span class="d_norsp">유</span></td>
+									<td><span class="d_norsp">무</span></td>
+									<td><span class="d_norsp">무</span></td>
+								</tr>
+								<tr>
+									<td><span class="d_norsp">2</span></td>
+									<td><input type="checkbox" class="rdchk"></td>
+									<td><span class="d_norsp">홍길동</span></td>
+									<td><span class="d_norsp">부</span></td>
+									<td><span class="d_norsp">000000-0000000</span></td>
+									<td><span class="d_norsp">남</span></td>
+									<td><span class="d_norsp">유</span></td>
+									<td><span class="d_norsp">무</span></td>
+									<td><span class="d_norsp">무</span></td>
+								</tr>
+								<!-- <tr>
+                                    <td><span class="d_norsp">2023.05.25</span></td>
+                                    <td><span class="d_norsp">정기급여</span></td>
+                                    <td><span class="d_norsp">4,600,000</span></td>
+                                    <td><span class="d_norsp">250,000</span></td>
+                                    <td><span class="d_norsp">4,350,000</span></td>
+                                </tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="btn_fsm_w">
+					<a href="javascript:;" class="btn_fsm">선택</a>
+				</div>
+			</div>
+			<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+		</div>
+	</div>
+	<!-- // layer -->
+
+
+
+	<script>
+		// 퍼블확인용
+		let url = window.location.href.split('?')[1];
+		let url_2 = url !== undefined ? url.split('#')[0] : null;
+		if (url_2 === "family") {
+			dimLayerShow({
+				target: "#family_layer"
+			});
+		}
+
+		if (url_2 === "popup") {
+			dimLayerShow({
+				target: "#sign_layer"
+			});
+		}
+
+		document.querySelector("#btn_form_more").addEventListener("click", () => {
+			dimLayerShow({
+				target: "#sign_layer"
+			});
+		});
+
+		document.querySelector("#btn_family_call").addEventListener("click", () => {
+			dimLayerShow({
+				target: "#family_layer"
+			});
+		});
+
+		// document.querySelector("#btn_form_more").addEventListener("click",()=>{
+		//     dimLayerShow({ target : "#sign_layer"});
+		// });
+	</script>
 </body>
 
 </html>

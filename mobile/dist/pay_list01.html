@@ -14,11 +14,16 @@
 	<title>H그린파워 HR시스템</title>
 </head>
 
+
 <body class="front_body">
 	<div class="page_wrap">
-		<!-- header -->
-		<header class="header_zone type2">
-			<h1 class="header_main_imgtitle"><a href="#" class="header_main_imglogo"><img src="./images/toplogo.png" alt="HGREEN POWER"></a></h1>
+		<header class="header_zone">
+			<div class="header_icomenu_g">
+				<a href="#" class="header_icomenu ico_home"><span class="hdtext">홈</span></a>
+			</div>
+
+			<h1 class="header_sub_title">급여명세서 조회</h1>
+
 			<a href="#" class="btn_mobile_menu">
 				<div class="btn_mobile_menu_obj"></div>
 				<span class="hdtext">전체메뉴 열기</span>
@@ -64,11 +69,53 @@
 			</div>
 			<!-- // mobile_menu -->
 		</header>
-		<!-- // header -->
-
 		<!-- middle -->
 		<section class="middle_zone">
-			내용이 들어갑니다.
+			<div class="sortdata_field_form">
+				<table class="sortdata_field">
+					<tr>
+						<th><span class="sortdata_label">급여년도</span></th>
+						<td>
+							<select class="dsel">
+								<option>2023</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="scroll_tb_zone">
+				<div class="data_tb_w">
+					<table class="data_tb">
+						<thead>
+							<tr>
+								<th><span class="data_thtext">급여일자</span></th>
+								<th><span class="data_thtext">지급구분</span></th>
+								<th><span class="data_thtext">지급액</span></th>
+								<th><span class="data_thtext">공제액</span></th>
+								<th><span class="data_thtext">실지급액</span></th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td><span class="d_norsp">소계</span></td>
+								<td></td>
+								<td><span class="d_norsp">4,600,000</span></td>
+								<td><span class="d_norsp">250,000</span></td>
+								<td><span class="d_norsp">4,350,000</span></td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<tr>
+								<td><span class="d_norsp">2023.05.25</span></td>
+								<td><span class="d_norsp">정기급여</span></td>
+								<td><span class="d_norsp">4,600,000</span></td>
+								<td><span class="d_norsp">250,000</span></td>
+								<td><span class="d_norsp">4,350,000</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</section>
 		<!-- // middle -->
 	</div>

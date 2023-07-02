@@ -6,16 +6,16 @@
     <div class="page_wrap">
         @@include('./include/header_sub.html', {
         page_sub: true,
-        sub_title: "공지사항"
+        sub_title: "진행함"
         })
         <!-- middle -->
         <section class="middle_zone">
             <div class="form_field_item_zone">
-                <div class="fvtb_w onlytd">
+                <div class="fvtb_w type3">
                     <table class="fvtb">
                         <tbody>
                             <tr>
-                                <!-- <th class="has_fvth_sp"><span class="fvth_sp imp">기간</span></th> -->
+                                <th class="has_fvth_sp"><span class="fvth_sp imp">기간</span></th>
                                 <td class="has_fitem">
                                     <ul class="fvinitem_list">
                                         <li><input type="date" class="input_calendar"></li>
@@ -25,23 +25,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <!-- <th class="has_fvth_sp"><span class="fvth_sp imp">검색</span></th> -->
+                                <th class="has_fvth_sp"><span class="fvth_sp imp">신청서</span></th>
                                 <td class="has_fitem2">
                                     <div class="fvdata_btb">
                                         <div class="fvdata_btd fbtd01">
-                                            <!-- <select class="dsel">
+                                            <select class="dsel">
                                                 <option>신청서를 선택해주세요</option>
-                                            </select> -->
-                                            <div class="inform_item_fxwrap">
-                                                <div class="inform_item wid_short30">
-                                                    <select class="dsel">
-                                                        <option>선택</option>
-                                                    </select>
-                                                </div>
-                                                <div class="inform_item">
-                                                    <input type="text" class="fvint" value="입력">
-                                                </div>
-                                            </div>
+                                            </select>
                                         </div>
                                         <div class="fvdata_btd fbtd02">
                                             <div class="btn_itemin_w">
@@ -58,7 +48,7 @@
                     <ul class="getdata_list">
                         <li>
                             <a href="#" class="getdata_item">
-                                <div class="getdata_main">[작성부서] 제목</div>
+                                <div class="getdata_main">[결제]출장 신청서</div>
                                 <div class="getdata_sub_g">
                                     <div class="getdata_sub">작성자 : 곽훈도 [2020.04.01 16:08:39]</div>
                                     <i class="getdata_ico"></i>
@@ -67,7 +57,7 @@
                         </li>
                         <li>
                             <a href="#" class="getdata_item">
-                                <div class="getdata_main">[작성부서] 제목 2</div>
+                                <div class="getdata_main">[결제]출장 신청서</div>
                                 <div class="getdata_sub_g">
                                     <div class="getdata_sub">작성자 : 곽훈도 [2020.04.01 16:08:39]</div>
                                     <i class="getdata_ico"></i>
@@ -89,41 +79,6 @@
         </section>
         <!-- // middle -->
     </div>
-
-    <!-- layer -->
-    <div class="dlayer_w" id="notice_view_layer">
-        <div class="dlayer_bg"></div>
-        <div class="dlayer_box">
-            <div class="dlayer_tit_low">
-                <h2 class="dlayer_tit">공지사항</h2>
-            </div>
-            <div class="dlayer_cont_low">
-                <div class="data_view_render">
-                    내용이 들어갑니다.
-                </div>
-            </div>
-            <a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
-        </div>
-    </div>
-    <!-- // layer -->
-
-
-
-    <script>
-        // 퍼블확인용
-        let url = window.location.href.split('?')[1];
-        let url_2 = url !== undefined ? url.split('#')[0] : null;
-        if (url_2 === "detail") {
-            dimLayerShow({ target: "#notice_view_layer" });
-        }
-
-        const getdata_item = document.querySelectorAll(".getdata_item");
-        getdata_item.forEach((item) => {
-            item.addEventListener("click", () => {
-                dimLayerShow({ target: "#notice_view_layer" });
-            });
-        });
-    </script>
 </body>
 
 </html>

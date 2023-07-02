@@ -1,208 +1,242 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header_sub.html', {
-                page_sub: true,
-                sub_title: "근태취소신청"
-            })
-            <!-- middle -->
-            <section class="middle_zone">
-               <div class="form_field_item_zone">
-                    <div class="form_field_item_group">
-                        <div class="form_field_item">
-                            <div class="form_field_title_row">
-                                <p class="form_field_title">결재라인</p>
-                                <button type="button" class="btn_form_more" id="btn_form_more"></button>
-                            </div>
-                            <div class="form_field_content_row type2">
-                                <div class="field_content_item">
-                                    <p class="field_content_title">작성부서</p>
-                                    <div class="field_content_data_wrap">
-                                        <ul class="field_data_form">
-                                            <li>
-                                                <div class="field_data_thcols"><span class="field_data_key">기안</span></div>
-                                                <div class="field_data_tdcols"><div class="field_data_value">곽훈도(과장/6급)</div></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+@@include('./include/head.html')
+
+<body class="front_body">
+    <div class="page_wrap">
+        @@include('./include/header_sub.html', {
+        page_sub: true,
+        sub_title: "근태취소신청"
+        })
+        <!-- middle -->
+        <section class="middle_zone">
+            <div class="form_field_item_zone">
+                <div class="form_field_item_group">
+                    <div class="form_field_item">
+                        <div class="form_field_title_row">
+                            <p class="form_field_title">결재라인</p>
+                            <button type="button" class="btn_form_more" id="btn_form_more"></button>
+                        </div>
+                        <div class="form_field_content_row type2">
+                            <div class="field_content_item">
+                                <p class="field_content_title">작성부서</p>
+                                <div class="field_content_data_wrap">
+                                    <ul class="field_data_form">
+                                        <li>
+                                            <div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+                                            <div class="field_data_tdcols">
+                                                <div class="field_data_value">곽훈도(과장/6급)</div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="field_content_item">
-                                    <p class="field_content_title">처리부서</p>
-                                    <div class="field_content_data_wrap">
-                                        <ul class="field_data_form">
-                                            <li>
-                                                <div class="field_data_thcols"><span class="field_data_key">결재</span></div>
-                                                <div class="field_data_tdcols"><div class="field_data_value">진상인(과장/6급)</div></div>
-                                            </li>
-                                            <li>
-                                                <div class="field_data_thcols"><span class="field_data_key">수신</span></div>
-                                                <div class="field_data_tdcols"><div class="field_data_value">홍길동(팀장/5급)</div></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            </div>
+                            <div class="field_content_item">
+                                <p class="field_content_title">처리부서</p>
+                                <div class="field_content_data_wrap">
+                                    <ul class="field_data_form">
+                                        <li>
+                                            <div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+                                            <div class="field_data_tdcols">
+                                                <div class="field_data_value">진상인(과장/6급)</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+                                            <div class="field_data_tdcols">
+                                                <div class="field_data_value">홍길동(팀장/5급)</div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="form_field_item">
-                            <div class="form_field_title_row align_type2">
-                                <p class="form_field_title">신청내역</p>
-                                <div class="form_field_title_else_g">
-                                    <a href="javascript:;" class="btn_csm type4 small" id="btn_history_call">대상문서선택</a>
-                                </div>
+                    </div>
+                    <div class="form_field_item">
+                        <div class="form_field_title_row align_type2">
+                            <p class="form_field_title">신청내역</p>
+                            <div class="form_field_title_else_g">
+                                <a href="javascript:;" class="btn_csm type4 small" id="btn_history_call">대상문서선택</a>
                             </div>
-                            <div class="form_field_content_row">
-                                <div class="fvtb_w dtype4">
-                                    <table class="fvtb">
-                                        <tbody>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
-                                                <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">휴가구분</span></th>
-                                                <td>
-                                                    <div class="inform_item_fxwrap">
-														<div class="inform_item wid_short30">
-															<input type="text" class="fvint" readonly value="연차">
-														</div>
-														<div class="inform_item">
-															<input type="text" class="fvint" readonly value="연차휴가">
-														</div>
-													</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">휴가기간</span></th>
-                                                <td>
-                                                    <div class="inblock_item_group">
-                                                        <div class="inblock_item">
-                                                            <input type="date" class="input_calendar">
-                                                        </div>
-                                                        <div class="inblock_item">
-                                                            <input type="date" class="input_calendar">
-                                                        </div>
+                        </div>
+                        <div class="form_field_content_row">
+                            <div class="fvtb_w dtype4">
+                                <table class="fvtb">
+                                    <tbody>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                            <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">휴가구분</span></th>
+                                            <td>
+                                                <div class="inform_item_fxwrap">
+                                                    <div class="inform_item wid_short30">
+                                                        <input type="text" class="fvint" readonly value="연차">
                                                     </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">휴가일수</span></th>
-                                                <td>
-                                                    <input type="text" class="fvint" readonly value="4" style="width:50px">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">대상가족</span></th>
-                                                <td>
-                                                    <input type="text" class="fvint" readonly value="홍OO" style="width:50%">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">질병구분<br>상세</span></th>
-                                                <td>
-                                                    <div class="inform_item_fxwrap">
-														<div class="inform_item wid_short30">
-															<input type="text" class="fvint" readonly>
-														</div>
-														<div class="inform_item">
-															<input type="text" class="fvint" readonly>
-														</div>
-													</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">신청사유</span></th>
-                                                <td>
-                                                    <input type="text" class="fvint" readonly>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">취소사유</span></th>
-                                                <td>
-                                                    <input type="text" class="fvint">
-                                                </td>
-                                            </tr>
-                                            <tr class="type4">
-                                                <th class="has_fvth_sp"><span class="fvth_sp">취소구분</span></th>
-                                                <td class="type2">
-                                                    <div class="rdchkitem_list_w">
-                                                        <ul class="rdchkitem_list">
-                                                            <li>
-                                                                <div class="rdchkitem">
-                                                                    <input type="radio" class="rdchk" name="reason" id="reason01">
-                                                                    <label for="reason01" class="rdchk_lab">전체취소</label>
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="rdchkitem">
-                                                                    <input type="radio" class="rdchk" name="reason" id="reason02" checked>
-                                                                    <label for="reason02" class="rdchk_lab">부분취소</label>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
+                                                    <div class="inform_item">
+                                                        <input type="text" class="fvint" readonly value="연차휴가">
                                                     </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="has_tb">
-                                                <td colspan="2">
-                                                    <!--  -->
-                                                    <div class="data_tb_w">
-                                                        <table class="data_tb type5" name="dnlform_inlist">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="ctb_wid01"><span class="data_thtext">상태</span></th>
-                                                                    <th class="ctb_wid02"><span class="data_thtext">휴가일자</span></th>
-                                                                    <th class="ctb_wid03"><span class="data_thtext">휴가코드</span></th>
-                                                                    <th class="ctb_wid04"><span class="d_wpsp data_thtext">취소여부</span></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="ctb_wid01"><span class="d_norsp">텍스트</span></td>
-                                                                    <td class="ctb_wid02"><span class="d_norsp">2020.12.10</span></td>
-                                                                    <td class="ctb_wid03"><span class="d_norsp">연차</span></td>
-                                                                    <td class="ctb_wid04">
-                                                                        <input type="checkbox" class="rdchk">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="ctb_wid01"><span class="d_norsp">텍스트</span></td>
-                                                                    <td class="ctb_wid02"><span class="d_norsp">2020.12.10</span></td>
-                                                                    <td class="ctb_wid03"><span class="d_norsp">연차</span></td>
-                                                                    <td class="ctb_wid04">
-                                                                        <input type="checkbox" class="rdchk">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="ctb_wid01"><span class="d_norsp">텍스트</span></td>
-                                                                    <td class="ctb_wid02"><span class="d_norsp">2020.12.10</span></td>
-                                                                    <td class="ctb_wid03"><span class="d_norsp">토요일</span></td>
-                                                                    <td class="ctb_wid04">
-                                                                        <input type="checkbox" class="rdchk">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="ctb_wid01"><span class="d_norsp">텍스트</span></td>
-                                                                    <td class="ctb_wid02"><span class="d_norsp">2020.12.10</span></td>
-                                                                    <td class="ctb_wid03"><span class="d_norsp">일요일</span></td>
-                                                                    <td class="ctb_wid04">
-                                                                        <input type="checkbox" class="rdchk">
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">휴가기간</span></th>
+                                            <td>
+                                                <div class="inblock_item_group">
+                                                    <div class="inblock_item">
+                                                        <input type="date" class="input_calendar half_wid">
                                                     </div>
-                                                    <style>
-                                                        table[name="dnlform_inlist"] .ctb_wid01{}
-                                                        table[name="dnlform_inlist"] .ctb_wid02{width:28%;}
-                                                        table[name="dnlform_inlist"] .ctb_wid03{width:28%;}
-                                                        table[name="dnlform_inlist"] .ctb_wid04{width:1%;}
-                                                    </style>
-                                                    <!-- // -->
-                                                </td>
-                                            </tr>
-                                            <!-- <tr>
+                                                    <div class="inblock_item">
+                                                        <input type="date" class="input_calendar half_wid">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">휴가일수</span></th>
+                                            <td>
+                                                <input type="text" class="fvint" readonly value="4" style="width:50px">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">대상가족</span></th>
+                                            <td>
+                                                <input type="text" class="fvint" readonly value="홍OO" style="width:50%">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">질병구분<br>상세</span></th>
+                                            <td>
+                                                <div class="inform_item_fxwrap">
+                                                    <div class="inform_item wid_short30">
+                                                        <input type="text" class="fvint" readonly>
+                                                    </div>
+                                                    <div class="inform_item">
+                                                        <input type="text" class="fvint" readonly>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">신청사유</span></th>
+                                            <td>
+                                                <input type="text" class="fvint" readonly>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">취소사유</span></th>
+                                            <td>
+                                                <input type="text" class="fvint">
+                                            </td>
+                                        </tr>
+                                        <tr class="type4">
+                                            <th class="has_fvth_sp"><span class="fvth_sp">취소구분</span></th>
+                                            <td class="type2">
+                                                <div class="rdchkitem_list_w">
+                                                    <ul class="rdchkitem_list">
+                                                        <li>
+                                                            <div class="rdchkitem">
+                                                                <input type="radio" class="rdchk" name="reason"
+                                                                    id="reason01">
+                                                                <label for="reason01" class="rdchk_lab">전체취소</label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="rdchkitem">
+                                                                <input type="radio" class="rdchk" name="reason"
+                                                                    id="reason02" checked>
+                                                                <label for="reason02" class="rdchk_lab">부분취소</label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="has_tb">
+                                            <td colspan="2">
+                                                <!--  -->
+                                                <div class="data_tb_w">
+                                                    <table class="data_tb type5" name="dnlform_inlist">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="ctb_wid01"><span
+                                                                        class="data_thtext">상태</span></th>
+                                                                <th class="ctb_wid02"><span
+                                                                        class="data_thtext">휴가일자</span></th>
+                                                                <th class="ctb_wid03"><span
+                                                                        class="data_thtext">휴가코드</span></th>
+                                                                <th class="ctb_wid04"><span
+                                                                        class="d_wpsp data_thtext">취소여부</span></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="ctb_wid01"><span class="d_norsp">텍스트</span>
+                                                                </td>
+                                                                <td class="ctb_wid02"><span
+                                                                        class="d_norsp">2020.12.10</span></td>
+                                                                <td class="ctb_wid03"><span class="d_norsp">연차</span>
+                                                                </td>
+                                                                <td class="ctb_wid04">
+                                                                    <input type="checkbox" class="rdchk">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="ctb_wid01"><span class="d_norsp">텍스트</span>
+                                                                </td>
+                                                                <td class="ctb_wid02"><span
+                                                                        class="d_norsp">2020.12.10</span></td>
+                                                                <td class="ctb_wid03"><span class="d_norsp">연차</span>
+                                                                </td>
+                                                                <td class="ctb_wid04">
+                                                                    <input type="checkbox" class="rdchk">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="ctb_wid01"><span class="d_norsp">텍스트</span>
+                                                                </td>
+                                                                <td class="ctb_wid02"><span
+                                                                        class="d_norsp">2020.12.10</span></td>
+                                                                <td class="ctb_wid03"><span class="d_norsp">토요일</span>
+                                                                </td>
+                                                                <td class="ctb_wid04">
+                                                                    <input type="checkbox" class="rdchk">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="ctb_wid01"><span class="d_norsp">텍스트</span>
+                                                                </td>
+                                                                <td class="ctb_wid02"><span
+                                                                        class="d_norsp">2020.12.10</span></td>
+                                                                <td class="ctb_wid03"><span class="d_norsp">일요일</span>
+                                                                </td>
+                                                                <td class="ctb_wid04">
+                                                                    <input type="checkbox" class="rdchk">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <style>
+                                                    table[name="dnlform_inlist"] .ctb_wid01 {}
+
+                                                    table[name="dnlform_inlist"] .ctb_wid02 {
+                                                        width: 28%;
+                                                    }
+
+                                                    table[name="dnlform_inlist"] .ctb_wid03 {
+                                                        width: 28%;
+                                                    }
+
+                                                    table[name="dnlform_inlist"] .ctb_wid04 {
+                                                        width: 1%;
+                                                    }
+                                                </style>
+                                                <!-- // -->
+                                            </td>
+                                        </tr>
+                                        <!-- <tr>
                                                 <th class="has_fvth_sp"><span class="fvth_sp">휴직유형</span></th>
                                                 <td>
                                                     <select class="dsel">
@@ -271,82 +305,84 @@
                                                     <textarea class="fvta htype2"></textarea>
                                                 </td>
                                             </tr> -->
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <div class="btn_fsm_w">
-                        <div class="btn_fsm_fxwrap">
-                            <a href="javascript:;" data-toggle="#file_form5" class="btn_fsm type2 d_type2"><span class="toggle_ico"></span><span class="toggle_text">첨부파일</span></a>
-                            <a href="javascript:;" class="btn_fsm">결재요청</a>
-                        </div>
+                </div>
+                <div class="btn_fsm_w">
+                    <div class="btn_fsm_fxwrap">
+                        <a href="javascript:;" data-toggle="#file_form5" class="btn_fsm type2 d_type2"><span
+                                class="toggle_ico"></span><span class="toggle_text">첨부파일</span></a>
+                        <a href="javascript:;" class="btn_fsm">결재요청</a>
                     </div>
-                    <div class="file_form_group toggle_item" id="file_form5">
-                        <div class="fileui_tb_w">
-                            <div class="fileui_tb">
-                                <div class="fileui_td has_btn">
-                                    <div class="fkef_tb2_w">
-                                        <input type="file" class="fkef_file">
-                                        <a href="javascript:;" class="btn_fakefile">파일 선택</a>
-                                    </div>
-                                </div>
-                                <div class="fileui_td">
-                                    <div class="filename_para">선택된 파일 없음</div>
-                                </div>
-                                <div class="fileui_td has_btn">
-                                    <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                </div>
+                <div class="file_form_group toggle_item" id="file_form5">
+                    <div class="fileui_tb_w">
+                        <div class="fileui_tb">
+                            <div class="fileui_td has_btn">
+                                <div class="fkef_tb2_w">
+                                    <input type="file" class="fkef_file">
+                                    <a href="javascript:;" class="btn_fakefile">파일 선택</a>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="tbsk_tb_w">
-                            <table class="tbsk_tb">
-                                <thead>
-                                    <tr>
-                                        <th class="ctb2_w01">파일명</th>
-                                        <th class="ctb2_w02">용량</th>
-                                        <th class="ctb2_w03">삭제</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="has_data">첨부파일.jpg</td>
-                                        <td>14KB</td>
-                                        <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="fileui_td">
+                                <div class="filename_para">선택된 파일 없음</div>
+                            </div>
+                            <div class="fileui_td has_btn">
+                                <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                            </div>
                         </div>
                     </div>
-               </div>
-            </section>
-            <!-- // middle -->
-        </div>
 
-        @@include('./include/sign_popup.html')
-        @@include('./include/history_popup.html')
+                    <div class="tbsk_tb_w">
+                        <table class="tbsk_tb">
+                            <thead>
+                                <tr>
+                                    <th class="ctb2_w01">파일명</th>
+                                    <th class="ctb2_w02">용량</th>
+                                    <th class="ctb2_w03">삭제</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="has_data">첨부파일.jpg</td>
+                                    <td>14KB</td>
+                                    <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // middle -->
+    </div>
 
-        <script>
-            // 퍼블확인용
-            let url = window.location.href.split('?')[1];
-            let url_2 = url !== undefined ? url.split('#')[0] : null;
-            if(url_2 === "popup"){
-                dimLayerShow({ target : "#sign_layer"});
-            }
-            if(url_2 === "history"){
-                dimLayerShow({ target : "#history_layer"});
-            }
+    @@include('./include/sign_popup.html')
+    @@include('./include/history_popup.html')
 
-            document.querySelector("#btn_form_more").addEventListener("click",()=>{
-                dimLayerShow({ target : "#sign_layer"});
-            });
+    <script>
+        // 퍼블확인용
+        let url = window.location.href.split('?')[1];
+        let url_2 = url !== undefined ? url.split('#')[0] : null;
+        if (url_2 === "popup") {
+            dimLayerShow({ target: "#sign_layer" });
+        }
+        if (url_2 === "history") {
+            dimLayerShow({ target: "#history_layer" });
+        }
 
-            document.querySelector("#btn_history_call").addEventListener("click",()=>{
-                dimLayerShow({ target : "#history_layer"});
-            });
-        </script>
+        document.querySelector("#btn_form_more").addEventListener("click", () => {
+            dimLayerShow({ target: "#sign_layer" });
+        });
 
-    </body>
+        document.querySelector("#btn_history_call").addEventListener("click", () => {
+            dimLayerShow({ target: "#history_layer" });
+        });
+    </script>
+
+</body>
+
 </html>

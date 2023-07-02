@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header.html')
-            <!-- middle -->
-            <section class="middle_zone">
-                내용이 들어갑니다.
-            </section>
-            <!-- // middle -->
-        </div>
-    </body>
+@@include('./include/head.html')
+
+<body class="front_body">
+    <div class="page_wrap">
+        @@include('./include/header_sub.html', {
+        page_sub: true,
+        sub_title: "급여명세서 조회"
+        })
+        <!-- middle -->
+        <section class="middle_zone">
+            <div class="sortdata_field_form">
+                <table class="sortdata_field">
+                    <tr>
+                        <th><span class="sortdata_label">급여년도</span></th>
+                        <td>
+                            <select class="dsel">
+                                <option>2023</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="scroll_tb_zone">
+                <div class="data_tb_w">
+                    <table class="data_tb">
+                        <thead>
+                            <tr>
+                                <th><span class="data_thtext">급여일자</span></th>
+                                <th><span class="data_thtext">지급구분</span></th>
+                                <th><span class="data_thtext">지급액</span></th>
+                                <th><span class="data_thtext">공제액</span></th>
+                                <th><span class="data_thtext">실지급액</span></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <td><span class="d_norsp">소계</span></td>
+                                <td></td>
+                                <td><span class="d_norsp">4,600,000</span></td>
+                                <td><span class="d_norsp">250,000</span></td>
+                                <td><span class="d_norsp">4,350,000</span></td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td><span class="d_norsp">2023.05.25</span></td>
+                                <td><span class="d_norsp">정기급여</span></td>
+                                <td><span class="d_norsp">4,600,000</span></td>
+                                <td><span class="d_norsp">250,000</span></td>
+                                <td><span class="d_norsp">4,350,000</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- // middle -->
+    </div>
+</body>
+
 </html>

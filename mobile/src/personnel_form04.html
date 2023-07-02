@@ -1,146 +1,159 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header_sub.html', {
-                page_sub: true,
-                sub_title: "퇴직신청서"
-            })
-            <!-- middle -->
-            <section class="middle_zone">
-               <div class="form_field_item_zone">
-                    <div class="form_field_item_group">
-                        <div class="form_field_item">
-                            <div class="form_field_title_row">
-                                <p class="form_field_title">결재라인</p>
-                                <button type="button" class="btn_form_more" id="btn_form_more"></button>
-                            </div>
-                            <div class="form_field_content_row type2">
-                                <div class="field_content_item">
-                                    <p class="field_content_title">작성부서</p>
-                                    <div class="field_content_data_wrap">
-                                        <ul class="field_data_form">
-                                            <li>
-                                                <div class="field_data_thcols"><span class="field_data_key">기안</span></div>
-                                                <div class="field_data_tdcols"><div class="field_data_value">곽훈도(과장/6급)</div></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="field_content_item">
-                                    <p class="field_content_title">처리부서</p>
-                                    <div class="field_content_data_wrap">
-                                        <ul class="field_data_form">
-                                            <li>
-                                                <div class="field_data_thcols"><span class="field_data_key">결재</span></div>
-                                                <div class="field_data_tdcols"><div class="field_data_value">진상인(과장/6급)</div></div>
-                                            </li>
-                                            <li>
-                                                <div class="field_data_thcols"><span class="field_data_key">수신</span></div>
-                                                <div class="field_data_tdcols"><div class="field_data_value">홍길동(팀장/5급)</div></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+@@include('./include/head.html')
+
+<body class="front_body">
+    <div class="page_wrap">
+        @@include('./include/header_sub.html', {
+        page_sub: true,
+        sub_title: "퇴직신청서"
+        })
+        <!-- middle -->
+        <section class="middle_zone">
+            <div class="form_field_item_zone">
+                <div class="form_field_item_group">
+                    <div class="form_field_item">
+                        <div class="form_field_title_row">
+                            <p class="form_field_title">결재라인</p>
+                            <button type="button" class="btn_form_more" id="btn_form_more"></button>
                         </div>
-                        <div class="form_field_item">
-                            <div class="form_field_title_row">
-                                <p class="form_field_title">신청서 내용</p>
+                        <div class="form_field_content_row type2">
+                            <div class="field_content_item">
+                                <p class="field_content_title">작성부서</p>
+                                <div class="field_content_data_wrap">
+                                    <ul class="field_data_form">
+                                        <li>
+                                            <div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+                                            <div class="field_data_tdcols">
+                                                <div class="field_data_value">곽훈도(과장/6급)</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="form_field_content_row">
-                                <div class="fvtb_w dtype4">
-                                    <table class="fvtb">
-                                        <tbody>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
-                                                <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">사번</span></th>
-                                                <td><input type="text" class="fvint" readonly value="0241"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">부서</span></th>
-                                                <td><input type="text" class="fvint" readonly value="eHR파트"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">직위</span></th>
-                                                <td><input type="text" class="fvint" readonly value="과장"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">직급</span></th>
-                                                <td><input type="text" class="fvint" readonly value="G4"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp">직책</span></th>
-                                                <td><input type="text" class="fvint" readonly value="팀원"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp imp">퇴직희망일자</span></th>
-                                                <td>
-                                                    <input type="date" class="input_calendar">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp"><span class="fvth_sp imp">퇴직사유</span></th>
-                                                <td>
-                                                    <select class="dsel">
-                                                        <option>선택</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp align_type2"><span class="fvth_sp imp">퇴직세부사유</span></th>
-                                                <td>
-                                                    <textarea class="fvta htype2"></textarea>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>연락처</span></th>
-                                                <td><input type="text" class="fvint" placeholder="입력"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>주소</span></th>
-                                                <td><input type="text" class="fvint" placeholder="입력"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>사내 연락인</span></th>
-                                                <td><input type="text" class="fvint" placeholder="입력"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>이메일</span></th>
-                                                <td><input type="text" class="fvint" placeholder="입력"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                            <div class="field_content_item">
+                                <p class="field_content_title">처리부서</p>
+                                <div class="field_content_data_wrap">
+                                    <ul class="field_data_form">
+                                        <li>
+                                            <div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+                                            <div class="field_data_tdcols">
+                                                <div class="field_data_value">진상인(과장/6급)</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+                                            <div class="field_data_tdcols">
+                                                <div class="field_data_value">홍길동(팀장/5급)</div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="btn_fsm_w">
-                        <a href="javascript:;" class="btn_fsm">결재요청</a>
+                    <div class="form_field_item">
+                        <div class="form_field_title_row">
+                            <p class="form_field_title">신청서 내용</p>
+                        </div>
+                        <div class="form_field_content_row">
+                            <div class="fvtb_w dtype4">
+                                <table class="fvtb">
+                                    <tbody>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                            <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">사번</span></th>
+                                            <td><input type="text" class="fvint" readonly value="0241"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">부서</span></th>
+                                            <td><input type="text" class="fvint" readonly value="eHR파트"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">직위</span></th>
+                                            <td><input type="text" class="fvint" readonly value="과장"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">직급</span></th>
+                                            <td><input type="text" class="fvint" readonly value="G4"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">직책</span></th>
+                                            <td><input type="text" class="fvint" readonly value="팀원"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp imp">퇴직희망일자</span></th>
+                                            <td>
+                                                <input type="date" class="input_calendar half_wid">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp imp">퇴직사유</span></th>
+                                            <td>
+                                                <select class="dsel">
+                                                    <option>선택</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp align_type2"><span class="fvth_sp imp">퇴직세부사유</span>
+                                            </th>
+                                            <td>
+                                                <textarea class="fvta htype2"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>연락처</span>
+                                            </th>
+                                            <td><input type="text" class="fvint" placeholder="입력"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>주소</span>
+                                            </th>
+                                            <td><input type="text" class="fvint" placeholder="입력"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>사내
+                                                    연락인</span></th>
+                                            <td><input type="text" class="fvint" placeholder="입력"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">(퇴직후)<br>이메일</span>
+                                            </th>
+                                            <td><input type="text" class="fvint" placeholder="입력"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-               </div>
-            </section>
-            <!-- // middle -->
-        </div>
+                </div>
+                <div class="btn_fsm_w">
+                    <a href="javascript:;" class="btn_fsm">결재요청</a>
+                </div>
+            </div>
+        </section>
+        <!-- // middle -->
+    </div>
 
-        @@include('./include/sign_popup.html')
+    @@include('./include/sign_popup.html')
 
-        <script>
-            // 퍼블확인용
-            let url = window.location.href.split('?')[1];
-            let url_2 = url !== undefined ? url.split('#')[0] : null;
-            if(url_2 === "popup"){
-                dimLayerShow({ target : "#sign_layer"});
-            }
+    <script>
+        // 퍼블확인용
+        let url = window.location.href.split('?')[1];
+        let url_2 = url !== undefined ? url.split('#')[0] : null;
+        if (url_2 === "popup") {
+            dimLayerShow({ target: "#sign_layer" });
+        }
 
-            document.querySelector("#btn_form_more").addEventListener("click",()=>{
-                dimLayerShow({ target : "#sign_layer"});
-            });
-        </script>
-        
-    </body>
+        document.querySelector("#btn_form_more").addEventListener("click", () => {
+            dimLayerShow({ target: "#sign_layer" });
+        });
+    </script>
+
+</body>
+
 </html>

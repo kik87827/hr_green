@@ -14,11 +14,16 @@
 	<title>H그린파워 HR시스템</title>
 </head>
 
+
 <body class="front_body">
 	<div class="page_wrap">
-		<!-- header -->
-		<header class="header_zone type2">
-			<h1 class="header_main_imgtitle"><a href="#" class="header_main_imglogo"><img src="./images/toplogo.png" alt="HGREEN POWER"></a></h1>
+		<header class="header_zone">
+			<div class="header_icomenu_g">
+				<a href="#" class="header_icomenu ico_home"><span class="hdtext">홈</span></a>
+			</div>
+
+			<h1 class="header_sub_title">공지사항</h1>
+
 			<a href="#" class="btn_mobile_menu">
 				<div class="btn_mobile_menu_obj"></div>
 				<span class="hdtext">전체메뉴 열기</span>
@@ -64,14 +69,126 @@
 			</div>
 			<!-- // mobile_menu -->
 		</header>
-		<!-- // header -->
-
 		<!-- middle -->
 		<section class="middle_zone">
-			내용이 들어갑니다.
+			<div class="form_field_item_zone">
+				<div class="fvtb_w onlytd">
+					<table class="fvtb">
+						<tbody>
+							<tr>
+								<!-- <th class="has_fvth_sp"><span class="fvth_sp imp">기간</span></th> -->
+								<td class="has_fitem">
+									<ul class="fvinitem_list">
+										<li><input type="date" class="input_calendar"></li>
+										<li class="has_fvelse"><span class="fvelse">~</span></li>
+										<li><input type="date" class="input_calendar"></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<!-- <th class="has_fvth_sp"><span class="fvth_sp imp">검색</span></th> -->
+								<td class="has_fitem2">
+									<div class="fvdata_btb">
+										<div class="fvdata_btd fbtd01">
+											<!-- <select class="dsel">
+                                                <option>신청서를 선택해주세요</option>
+                                            </select> -->
+											<div class="inform_item_fxwrap">
+												<div class="inform_item wid_short30">
+													<select class="dsel">
+														<option>선택</option>
+													</select>
+												</div>
+												<div class="inform_item">
+													<input type="text" class="fvint" value="입력">
+												</div>
+											</div>
+										</div>
+										<div class="fvdata_btd fbtd02">
+											<div class="btn_itemin_w">
+												<a href="javascript:;" class="itemin btn_csm type2">조회</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="getdata_list_w">
+					<ul class="getdata_list">
+						<li>
+							<a href="#" class="getdata_item">
+								<div class="getdata_main">[작성부서] 제목</div>
+								<div class="getdata_sub_g">
+									<div class="getdata_sub">작성자 : 곽훈도 [2020.04.01 16:08:39]</div>
+									<i class="getdata_ico"></i>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="getdata_item">
+								<div class="getdata_main">[작성부서] 제목 2</div>
+								<div class="getdata_sub_g">
+									<div class="getdata_sub">작성자 : 곽훈도 [2020.04.01 16:08:39]</div>
+									<i class="getdata_ico"></i>
+								</div>
+							</a>
+						</li>
+						<li class="nodata_li">
+							<p class="nodata_para">데이터가 없습니다.</p>
+						</li>
+					</ul>
+				</div>
+				<div class="btn_morebox_wrap">
+					<a href="#" class="btn_morebox">
+						<i class="morebox_ico"></i>
+						<span class="morebox_text">더보기(3/20)</span>
+					</a>
+				</div>
+			</div>
 		</section>
 		<!-- // middle -->
 	</div>
+
+	<!-- layer -->
+	<div class="dlayer_w" id="notice_view_layer">
+		<div class="dlayer_bg"></div>
+		<div class="dlayer_box">
+			<div class="dlayer_tit_low">
+				<h2 class="dlayer_tit">공지사항</h2>
+			</div>
+			<div class="dlayer_cont_low">
+				<div class="data_view_render">
+					내용이 들어갑니다.
+				</div>
+			</div>
+			<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+		</div>
+	</div>
+	<!-- // layer -->
+
+
+
+	<script>
+		// 퍼블확인용
+		let url = window.location.href.split('?')[1];
+		let url_2 = url !== undefined ? url.split('#')[0] : null;
+		if (url_2 === "detail") {
+			dimLayerShow({
+				target: "#notice_view_layer"
+			});
+		}
+
+		const getdata_item = document.querySelectorAll(".getdata_item");
+		getdata_item.forEach((item) => {
+			item.addEventListener("click", () => {
+				dimLayerShow({
+					target: "#notice_view_layer"
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>
