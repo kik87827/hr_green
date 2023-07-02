@@ -387,6 +387,7 @@ input.field_form_input.type2::input-placeholder{font-size:9px;}
 .inform_item.wid_short40{flex:0 0 40%;}
 .inform_item.flex_item_right{display:flex;justify-content: flex-end;}
 .unit_form_wrap{display:flex;align-items: center;gap:10px;}
+.unit_form_wrap.type2{gap:5px;}
 .unit_form_cols{flex:1;min-width:0;}
 .unit_form_cols.wid_short10{flex:0 0 10%;}
 .unit_form_cols.wid_short20{flex:0 0 20%;}
@@ -690,10 +691,12 @@ select.dsel.medium_size{height:36px;font-size:14px;}
 .guide_box_title:before{display:flex;justify-content: center;margin-right:5px;align-items: center;text-align: center;content:'';width:12px;height:12px;background:url("../images/icon_c_info.png") no-repeat 50% 50%/100% auto;border:1px solid #353535;border-radius:100%;}
 .guide_box_title_text{display:inline-block;font-size:12px;color:#2b2b2b;font-family: 'NotoSans-Medium';line-height:1;position:relative;top:-1px;}
 .guide_box_content_row{padding:13px;}
+.form_guide_wrap{margin-top:10px;}
 .indent_item_list{line-height:1.4;color:#333333;}
 .indent_item_list > li{display:flex;margin-bottom:10px;}
 .indent_item_list > li:last-of-type{margin-bottom:0 !important;}
 .indent_item_list.type2 > li{margin-bottom:5px;}
+.indent_item_list.type5 > li{margin-bottom:0;}
 .indent_item_list .design_check_list{margin-top:15px;}
 .indent_item_list.type3 > li{margin-bottom:25px;}
 .indent_item_list.type4 > li{display:block;}
@@ -816,7 +819,7 @@ text-align: left;
 input.input_calendar:focus{border-color:#000;}
 
 input.input_calendar:disabled,
-input.input_calendar:read-only{background-color:#f7f7f7;color:#333333;opacity:1;}
+input.input_calendar:read-only{background-color:#f7f7f7;color:#333333;opacity:1;border-color:#d5d5d5;}
 
 input.input_time{border:1px solid #d5d5d5;border-radius:4px;height:30px;padding:0 30px 0 10px;line-height:1;box-sizing:border-box;width:100%;font-size:12px;color:#2b2b2b;font-family: 'NotoSans-Regular';background:#fff url("../images/ico_text_time.png") no-repeat 100% 50%/30px auto;
 	-webkit-appearance: none;
@@ -835,7 +838,7 @@ text-align: left;
 input.input_time:focus{border-color:#000;}
 
 input.input_time:disabled,
-input.input_time:read-only{background-color:#f7f7f7;color:#333333;opacity:1;}
+input.input_time:read-only{background-color:#f7f7f7;color:#333333;opacity:1;border-color:#d5d5d5;}
 
 
 
