@@ -10,10 +10,192 @@
         })
         <!-- middle -->
         <section class="middle_zone">
-            내용이 들어갑니다.
+            <div class="form_field_item_zone">
+                <div class="form_field_item_group">
+                    <div class="form_field_item">
+                        <div class="form_field_title_row">
+                            <p class="form_field_title">결재라인</p>
+                            <button type="button" class="btn_form_more" id="btn_form_more"></button>
+                        </div>
+                        <div class="form_field_content_row type2">
+                            <div class="field_content_item">
+                                <p class="field_content_title">작성부서</p>
+                                <div class="field_content_data_wrap">
+                                    <ul class="field_data_form">
+                                        <li>
+                                            <div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+                                            <div class="field_data_tdcols">
+                                                <div class="field_data_value">곽훈도(과장/6급)</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="field_content_item">
+                                <p class="field_content_title">처리부서</p>
+                                <div class="field_content_data_wrap">
+                                    <ul class="field_data_form">
+                                        <li>
+                                            <div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+                                            <div class="field_data_tdcols">
+                                                <div class="field_data_value">진상인(과장/6급)</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+                                            <div class="field_data_tdcols">
+                                                <div class="field_data_value">홍길동(팀장/5급)</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_field_item">
+                        <div class="form_field_title_row">
+                            <p class="form_field_title">신청내역</p>
+                        </div>
+                        <div class="form_field_content_row">
+                            <ul class="imptext_list mt_10">
+                                <li>계좌번호 입력시 (-) 필수</li>
+                                <li>통장사본 필수</li>
+                            </ul>
+                            <div class="fvtb_w elsetb dtype4 mt_10">
+                                <table class="fvtb">
+                                    <tbody>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+                                            <td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp ptype2">
+                                                <span class="fvth_sp">변경전<br>은행</span>
+                                            </th>
+                                            <td>
+                                                <select class="dsel">
+                                                    <option>우리은행</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp ptype2">
+                                                <span class="fvth_sp">변경전<br>계좌번호</span>
+                                            </th>
+                                            <td><input type="text" class="fvint" value="111-222-333445"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp ptype2">
+                                                <span class="fvth_sp imp">변경후<br>은행</span>
+                                            </th>
+                                            <td>
+                                                <select class="dsel">
+                                                    <option>하나은행</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">변경사유</span></th>
+                                            <td>
+                                                <select class="dsel">
+                                                    <option>급여계좌변경</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp ptype2"><span class="fvth_sp imp">기타내용</span></th>
+                                            <td><input type="text" class="fvint" value="급여계좌변경"></td>
+                                        </tr>
+                                        <!-- <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">귀속년도</span></th>
+                                            <td><input type="text" class="fvint" value="2023"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">정산소득세</span></th>
+                                            <td><input type="text" class="fvint" value="100,000"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp">정산주민세</span></th>
+                                            <td><input type="text" class="fvint" value="100,000"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="has_fvth_sp"><span class="fvth_sp imp">분할납부 <br>개월수</span></th>
+                                            <td>
+                                                <select class="dsel">
+                                                    <option>3</option>
+                                                </select>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_fsm_w">
+                    <div class="btn_fsm_fxwrap">
+                        <a href="javascript:;" data-toggle="#file_form5" class="btn_fsm type2 d_type2"><span
+                                class="toggle_ico"></span><span class="toggle_text">첨부파일</span></a>
+                        <a href="javascript:;" class="btn_fsm">결재요청</a>
+                    </div>
+                </div>
+                <div class="file_form_group toggle_item" id="file_form5">
+                    <div class="fileui_tb_w">
+                        <div class="fileui_tb">
+                            <div class="fileui_td has_btn">
+                                <div class="fkef_tb2_w">
+                                    <input type="file" class="fkef_file">
+                                    <a href="javascript:;" class="btn_fakefile">파일 선택</a>
+                                </div>
+                            </div>
+                            <div class="fileui_td">
+                                <div class="filename_para">선택된 파일 없음</div>
+                            </div>
+                            <div class="fileui_td has_btn">
+                                <a href="javascript:;" class="btn_fakefile">파일 등록</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tbsk_tb_w">
+                        <table class="tbsk_tb">
+                            <thead>
+                                <tr>
+                                    <th class="ctb2_w01">파일명</th>
+                                    <th class="ctb2_w02">용량</th>
+                                    <th class="ctb2_w03">삭제</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="has_data">첨부파일.jpg</td>
+                                    <td>14KB</td>
+                                    <td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- // middle -->
     </div>
+
+    @@include('./include/sign_popup.html')
+
+    <script>
+        // 퍼블확인용
+        let url = window.location.href.split('?')[1];
+        let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+        if (url_2 === "popup") {
+            dimLayerShow({ target: "#sign_layer" });
+        }
+
+        document.querySelector("#btn_form_more").addEventListener("click", () => {
+            dimLayerShow({ target: "#sign_layer" });
+        });
+    </script>
 </body>
 
 </html>
