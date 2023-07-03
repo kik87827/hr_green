@@ -959,7 +959,7 @@ input.field_form_input.type2::input-placeholder {
 }
 
 .fvtb_w.onlytd td {
-	padding: 7.5px 15px;
+	padding: 7.5px 15px !important;
 }
 
 .fvtb_w.type2 .fvtb tbody td {
@@ -1227,6 +1227,26 @@ input.field_form_input.type2::input-placeholder {
 	font-family: 'NotoSans-Medium';
 }
 
+.btn_fvsubmit_w {
+	margin-top: 10px;
+}
+
+.btn_fvsubmit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 1px solid #00448d;
+	background: #00448d;
+	padding: 11px 12px 12px;
+	border-radius: 100px;
+	font-family: 'NotoSans-Medium';
+
+	color: #fff;
+	line-height: 1;
+	font-size: 12px;
+}
+
 .fvtb.key_type th {
 	width: 25%;
 }
@@ -1280,6 +1300,11 @@ input.field_form_input.type2::input-placeholder {
 	border-bottom: 0;
 }
 
+.form_field_title_row.dtype3 {
+	border-bottom: 0;
+	padding-bottom: 12px;
+}
+
 .form_field_title {
 	font-size: 14px;
 	line-height: 1;
@@ -1320,6 +1345,10 @@ input.field_form_input.type2::input-placeholder {
 	padding: 10px;
 }
 
+.form_field_content_row.type3 {
+	margin: 0 -15px;
+}
+
 .form_field_content_row>.fvtb_w {}
 
 .form_field_content_row>.fvtb_w .fvtb {
@@ -1328,6 +1357,10 @@ input.field_form_input.type2::input-placeholder {
 
 .form_field_content_row>.fvtb_w.elsetb .fvtb {
 	border-top: 1px solid #d9d9d9;
+}
+
+.form_field_content_row>.fvtb_w.elsetb2 {
+	border-top: 1px solid #626262;
 }
 
 .tail_field_item {
@@ -1387,6 +1420,8 @@ input.field_form_input.type2::input-placeholder {
 	white-space: nowrap;
 	font-weight: 500;
 }
+
+.fvdata {}
 
 .btn_data_control_wrap {
 	display: flex;
@@ -3396,6 +3431,14 @@ input.dlsort_int {
 	border-top: 1px solid #626262;
 }
 
+.data_tb_w.dtype2 * {
+	font-size: 12px;
+}
+
+.data_tb_w.dtype2 .data_tb thead th {
+	border-bottom: 1px solid #d9d9d9;
+}
+
 .data_tb {
 	width: 100%;
 }
@@ -3425,6 +3468,10 @@ input.dlsort_int {
 .data_tb thead th {
 	border-right: 1px solid #d9d9d9;
 	border-bottom: 1px solid #585858;
+}
+
+.data_tb tbody th {
+	border-right: 1px solid #d9d9d9;
 }
 
 .data_tb td {
@@ -3470,6 +3517,33 @@ input.dlsort_int {
 .data_tb td.nodata_td {
 	padding: 30px 0 28px !important;
 }
+
+.data_tfoot_w {
+	margin-top: 10px;
+}
+
+.data_tfoot_fxwrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'NotoSans-Medium';
+	font-size: 13px;
+	border-bottom: 1px solid #626262;
+	padding: 0 10px 10px;
+	margin-bottom: 10px;
+}
+
+.data_tfoot_fxwrap:last-of-type {
+	margin-bottom: 0;
+}
+
+.data_tfoot_cols {}
+
+.data_tfoot_cols:last-of-type {}
+
+.data_tfoot_label {}
+
+.data_tfoot_value {}
 
 .nodata {}
 
