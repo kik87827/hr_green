@@ -14,6 +14,7 @@
 	<title>H그린파워 HR시스템</title>
 </head>
 
+
 <body class="front_body">
 	<div class="page_wrap">
 		<header class="header_zone">
@@ -247,7 +248,78 @@
 		<script>
 			profileListToggle();
 		</script>
+
 	</div>
+
+	<!-- layer -->
+	<div class="dlayer_w" id="sms_layer">
+		<div class="dlayer_bg"></div>
+		<div class="dlayer_box">
+			<div class="dlayer_tit_low">
+				<h2 class="dlayer_tit">SMS 작성</h2>
+			</div>
+			<div class="dlayer_cont_low not_rd">
+				<div class="fvtb_w">
+					<table class="fvtb">
+						<tbody>
+							<tr>
+								<th class="has_fvth_sp"><span class="fvth_sp imp">제목</span></th>
+								<td><input type="text" class="fvint"></td>
+							</tr>
+							<tr class="type3">
+								<td colspan="2">
+									<p class="fvth_block">문자 내용</p>
+									<textarea class="fvta htype2"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="dlayer_btn_low">
+				<a href="#" class="btn_dlayer_submit closetrigger"><span class="dlayer_submit_text">문자발송</span></a>
+				<!-- closetrigger 클래스 있으면 클릭시 닫기 -->
+			</div>
+			<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+		</div>
+	</div>
+	<style>
+		#sign_line_tb .ctb_w01 {
+			width: 10%;
+		}
+
+		#sign_line_tb .ctb_w02 {
+			width: 10%;
+		}
+
+		#sign_line_tb .ctb_w03 {
+			width: 10%;
+		}
+
+		#sign_line_tb .ctb_w04 {}
+	</style>
+	<!-- // layer -->
+
+	<script>
+		// 퍼블확인용
+		let url = window.location.href.split('?')[1];
+		let url_2 = url !== undefined ? url.split('#')[0] : null;
+		if (url_2 === "popup") {
+			dimLayerShow({
+				target: "#sms_layer"
+			});
+		}
+
+		const icoSms = document.querySelectorAll(".ico_message");
+		icoSms.forEach((item) => {
+			item.addEventListener("click", () => {
+				dimLayerShow({
+					target: "#sms_layer"
+				});
+			});
+		});
+	</script>
+
 </body>
 
 </html>

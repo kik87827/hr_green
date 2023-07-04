@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
-    <body class="front_body">
-        <div class="page_wrap">
-            @@include('./include/header_sub.html', {
-                page_sub: true,
-                sub_title: "임직원조회"
-            })
-            <!-- middle -->
-            <section class="middle_zone">
-                <!-- <div class="global_form_wrap">
+@@include('./include/head.html')
+
+<body class="front_body">
+    <div class="page_wrap">
+        @@include('./include/header_sub.html', {
+        page_sub: true,
+        sub_title: "임직원조회"
+        })
+        <!-- middle -->
+        <section class="middle_zone">
+            <!-- <div class="global_form_wrap">
                     <div class="global_form_long_cols">
                         <select class="form_select"><option>전체</option></select>
                     </div>
@@ -20,172 +21,244 @@
                         </ul>
                     </div>
                 </div> -->
-                <div class="list_searchform_wrap">
-                    <div class="list_searchform_long">
-                        <div class="list_searchform_inwrap">
-                            <!-- <div class="searchform_inshort">
+            <div class="list_searchform_wrap">
+                <div class="list_searchform_long">
+                    <div class="list_searchform_inwrap">
+                        <!-- <div class="searchform_inshort">
                                 <select class="form_select"><option>이름</option></select>
                             </div> -->
-                            <div class="searchform_inlong">
-                                <input type="text" class="searchform_input" placeholder="이름/부서" />
-                            </div>
+                        <div class="searchform_inlong">
+                            <input type="text" class="searchform_input" placeholder="이름/부서" />
                         </div>
                     </div>
-                    <div class="list_searchform_short">
-                        <a href="#" class="btn_searchform_submit"><span class="hdtext">검색</span></a>
-                    </div>
                 </div>
-                <div class="profile_item_list_wrap">
-                    <ul class="profile_item_list">
-                        <li>
-                            <div class="profile_toggle_item">
-                                <div class="profile_toggle_bar">
-                                    <div class="profile_thum_cols"><img src="./images/temp_80x80.png" alt=""></div>
-                                    <div class="profile_spec_cols">
-                                        <div class="profile_spec_primary">홍길동</div>
-                                        <div class="profile_spec_tail_group">
-                                            <ul class="profile_tail_list">
-                                                <li>부서 : eHR파트</li>
-                                                <li>사번 : 0222</li>
-                                                <li>직급/직책 : 차장/팀장</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="profile_btn_cols">
-                                        <ul class="profile_control_btn_list">
-                                            <li><a href="#" class="btn_profile_control ico_call"><span class="hdtext">전화</span></a></li>
-                                            <li><a href="#" class="btn_profile_control ico_message"><span class="hdtext">메시지</span></a></li>
+                <div class="list_searchform_short">
+                    <a href="#" class="btn_searchform_submit"><span class="hdtext">검색</span></a>
+                </div>
+            </div>
+            <div class="profile_item_list_wrap">
+                <ul class="profile_item_list">
+                    <li>
+                        <div class="profile_toggle_item">
+                            <div class="profile_toggle_bar">
+                                <div class="profile_thum_cols"><img src="./images/temp_80x80.png" alt=""></div>
+                                <div class="profile_spec_cols">
+                                    <div class="profile_spec_primary">홍길동</div>
+                                    <div class="profile_spec_tail_group">
+                                        <ul class="profile_tail_list">
+                                            <li>부서 : eHR파트</li>
+                                            <li>사번 : 0222</li>
+                                            <li>직급/직책 : 차장/팀장</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="profile_toggle_tail">
-                                    <ul class="profile_tail_table">
-                                        <li>
-                                            <div class="tail_th_cols">
-                                                <div class="tail_label_item">
-                                                    <i class="tail_label_ico ico_hp"></i>
-                                                    <span class="tail_label_text">HP</span>
-                                                </div>
-                                            </div>
-                                            <div class="tail_td_cols">
-                                                <div class="tail_value_text">010-1234-5621</div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="tail_th_cols">
-                                                <div class="tail_label_item">
-                                                    <i class="tail_label_ico ico_company"></i>
-                                                    <span class="tail_label_text">회사번호</span>
-                                                </div>
-                                            </div>
-                                            <div class="tail_td_cols">
-                                                <div class="tail_value_text">02-520-2365</div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="tail_th_cols">
-                                                <div class="tail_label_item">
-                                                    <i class="tail_label_ico ico_mail"></i>
-                                                    <span class="tail_label_text">메일</span>
-                                                </div>
-                                            </div>
-                                            <div class="tail_td_cols">
-                                                <div class="tail_value_text">apple@bccard.com</div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="tail_th_cols">
-                                                <div class="tail_label_item">
-                                                    <i class="tail_label_ico ico_work"></i>
-                                                    <span class="tail_label_text">담당업무</span>
-                                                </div>
-                                            </div>
-                                            <div class="tail_td_cols">
-                                                <div class="tail_value_text">그룹웨어(다이렉트)</div>
-                                            </div>
-                                        </li>
+                                <div class="profile_btn_cols">
+                                    <ul class="profile_control_btn_list">
+                                        <li><a href="#" class="btn_profile_control ico_call"><span
+                                                    class="hdtext">전화</span></a></li>
+                                        <li><a href="#" class="btn_profile_control ico_message"><span
+                                                    class="hdtext">메시지</span></a></li>
                                     </ul>
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="profile_toggle_item">
-                                <div class="profile_toggle_bar">
-                                    <div class="profile_thum_cols"><img src="./images/temp_80x80.png" alt=""></div>
-                                    <div class="profile_spec_cols">
-                                        <div class="profile_spec_primary">홍길동</div>
-                                        <div class="profile_spec_tail_group">
-                                            <ul class="profile_tail_list">
-                                                <li>부서 : eHR파트</li>
-                                                <li>사번 : 0222</li>
-                                                <li>직급/직책 : 차장/팀장</li>
-                                            </ul>
+                            <div class="profile_toggle_tail">
+                                <ul class="profile_tail_table">
+                                    <li>
+                                        <div class="tail_th_cols">
+                                            <div class="tail_label_item">
+                                                <i class="tail_label_ico ico_hp"></i>
+                                                <span class="tail_label_text">HP</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="profile_btn_cols">
-                                        <ul class="profile_control_btn_list">
-                                            <li><a href="#" class="btn_profile_control ico_call"><span class="hdtext">전화</span></a></li>
-                                            <li><a href="#" class="btn_profile_control ico_message"><span class="hdtext">메시지</span></a></li>
+                                        <div class="tail_td_cols">
+                                            <div class="tail_value_text">010-1234-5621</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tail_th_cols">
+                                            <div class="tail_label_item">
+                                                <i class="tail_label_ico ico_company"></i>
+                                                <span class="tail_label_text">회사번호</span>
+                                            </div>
+                                        </div>
+                                        <div class="tail_td_cols">
+                                            <div class="tail_value_text">02-520-2365</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tail_th_cols">
+                                            <div class="tail_label_item">
+                                                <i class="tail_label_ico ico_mail"></i>
+                                                <span class="tail_label_text">메일</span>
+                                            </div>
+                                        </div>
+                                        <div class="tail_td_cols">
+                                            <div class="tail_value_text">apple@bccard.com</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tail_th_cols">
+                                            <div class="tail_label_item">
+                                                <i class="tail_label_ico ico_work"></i>
+                                                <span class="tail_label_text">담당업무</span>
+                                            </div>
+                                        </div>
+                                        <div class="tail_td_cols">
+                                            <div class="tail_value_text">그룹웨어(다이렉트)</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="profile_toggle_item">
+                            <div class="profile_toggle_bar">
+                                <div class="profile_thum_cols"><img src="./images/temp_80x80.png" alt=""></div>
+                                <div class="profile_spec_cols">
+                                    <div class="profile_spec_primary">홍길동</div>
+                                    <div class="profile_spec_tail_group">
+                                        <ul class="profile_tail_list">
+                                            <li>부서 : eHR파트</li>
+                                            <li>사번 : 0222</li>
+                                            <li>직급/직책 : 차장/팀장</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="profile_toggle_tail">
-                                    <ul class="profile_tail_table">
-                                        <li>
-                                            <div class="tail_th_cols">
-                                                <div class="tail_label_item">
-                                                    <i class="tail_label_ico ico_hp"></i>
-                                                    <span class="tail_label_text">HP</span>
-                                                </div>
-                                            </div>
-                                            <div class="tail_td_cols">
-                                                <div class="tail_value_text">010-1234-5621</div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="tail_th_cols">
-                                                <div class="tail_label_item">
-                                                    <i class="tail_label_ico ico_company"></i>
-                                                    <span class="tail_label_text">회사번호</span>
-                                                </div>
-                                            </div>
-                                            <div class="tail_td_cols">
-                                                <div class="tail_value_text">02-520-2365</div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="tail_th_cols">
-                                                <div class="tail_label_item">
-                                                    <i class="tail_label_ico ico_mail"></i>
-                                                    <span class="tail_label_text">메일</span>
-                                                </div>
-                                            </div>
-                                            <div class="tail_td_cols">
-                                                <div class="tail_value_text">apple@bccard.com</div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="tail_th_cols">
-                                                <div class="tail_label_item">
-                                                    <i class="tail_label_ico ico_work"></i>
-                                                    <span class="tail_label_text">담당업무</span>
-                                                </div>
-                                            </div>
-                                            <div class="tail_td_cols">
-                                                <div class="tail_value_text">그룹웨어(다이렉트)</div>
-                                            </div>
-                                        </li>
+                                <div class="profile_btn_cols">
+                                    <ul class="profile_control_btn_list">
+                                        <li><a href="#" class="btn_profile_control ico_call"><span
+                                                    class="hdtext">전화</span></a></li>
+                                        <li><a href="#" class="btn_profile_control ico_message"><span
+                                                    class="hdtext">메시지</span></a></li>
                                     </ul>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
+                            <div class="profile_toggle_tail">
+                                <ul class="profile_tail_table">
+                                    <li>
+                                        <div class="tail_th_cols">
+                                            <div class="tail_label_item">
+                                                <i class="tail_label_ico ico_hp"></i>
+                                                <span class="tail_label_text">HP</span>
+                                            </div>
+                                        </div>
+                                        <div class="tail_td_cols">
+                                            <div class="tail_value_text">010-1234-5621</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tail_th_cols">
+                                            <div class="tail_label_item">
+                                                <i class="tail_label_ico ico_company"></i>
+                                                <span class="tail_label_text">회사번호</span>
+                                            </div>
+                                        </div>
+                                        <div class="tail_td_cols">
+                                            <div class="tail_value_text">02-520-2365</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tail_th_cols">
+                                            <div class="tail_label_item">
+                                                <i class="tail_label_ico ico_mail"></i>
+                                                <span class="tail_label_text">메일</span>
+                                            </div>
+                                        </div>
+                                        <div class="tail_td_cols">
+                                            <div class="tail_value_text">apple@bccard.com</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="tail_th_cols">
+                                            <div class="tail_label_item">
+                                                <i class="tail_label_ico ico_work"></i>
+                                                <span class="tail_label_text">담당업무</span>
+                                            </div>
+                                        </div>
+                                        <div class="tail_td_cols">
+                                            <div class="tail_value_text">그룹웨어(다이렉트)</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- // middle -->
+        <script>
+            profileListToggle();
+        </script>
+
+    </div>
+
+    <!-- layer -->
+    <div class="dlayer_w" id="sms_layer">
+        <div class="dlayer_bg"></div>
+        <div class="dlayer_box">
+            <div class="dlayer_tit_low">
+                <h2 class="dlayer_tit">SMS 작성</h2>
+            </div>
+            <div class="dlayer_cont_low not_rd">
+                <div class="fvtb_w">
+                    <table class="fvtb">
+                        <tbody>
+                            <tr>
+                                <th class="has_fvth_sp"><span class="fvth_sp imp">제목</span></th>
+                                <td><input type="text" class="fvint"></td>
+                            </tr>
+                            <tr class="type3">
+                                <td colspan="2">
+                                    <p class="fvth_block">문자 내용</p>
+                                    <textarea class="fvta htype2"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </section>
-            <!-- // middle -->
-            <script>
-                profileListToggle();
-            </script>
+            </div>
+            <div class="dlayer_btn_low">
+                <a href="#" class="btn_dlayer_submit closetrigger"><span class="dlayer_submit_text">문자발송</span></a>
+                <!-- closetrigger 클래스 있으면 클릭시 닫기 -->
+            </div>
+            <a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
         </div>
-    </body>
+    </div>
+    <style>
+        #sign_line_tb .ctb_w01 {
+            width: 10%;
+        }
+
+        #sign_line_tb .ctb_w02 {
+            width: 10%;
+        }
+
+        #sign_line_tb .ctb_w03 {
+            width: 10%;
+        }
+
+        #sign_line_tb .ctb_w04 {}
+    </style>
+    <!-- // layer -->
+
+    <script>
+        // 퍼블확인용
+        let url = window.location.href.split('?')[1];
+        let url_2 = url !== undefined ? url.split('#')[0] : null;
+        if (url_2 === "popup") {
+            dimLayerShow({ target: "#sms_layer" });
+        }
+
+        const icoSms = document.querySelectorAll(".ico_message");
+        icoSms.forEach((item) => {
+            item.addEventListener("click", () => {
+                dimLayerShow({ target: "#sms_layer" });
+            });
+        });
+    </script>
+
+</body>
+
 </html>

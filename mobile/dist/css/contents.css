@@ -786,6 +786,8 @@ input.field_form_input.type2::input-placeholder {
 .dlayer_box {
 	z-index: 10;
 	position: fixed;
+	display: flex;
+	flex-direction: column;
 	top: 40px;
 	left: 15px;
 	width: calc(100% - 30px);
@@ -793,16 +795,28 @@ input.field_form_input.type2::input-placeholder {
 }
 
 .dlayer_tit_low {
-	position: absolute;
+	/* position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 51px;
+	width: 100%; */
+	min-height: 51px;
+	flex: 0;
 	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	border-radius: 10px 10px 0 0;
 	background: #f5faff;
 	border-bottom: 1px solid #cbd5dd;
+}
+
+.dlayer_btn_low {
+	min-height: 51px;
+	flex: 0;
+	border-radius: 0 0 10px 10px;
+	position: relative;
+	overflow: hidden;
 }
 
 .dlayer_tit_low.type2 {
@@ -814,7 +828,8 @@ input.field_form_input.type2::input-placeholder {
 	font-size: 16px;
 	font-family: 'NotoSans-Medium';
 	text-align: center;
-	line-height: 51px;
+	padding: 10px;
+	/* line-height: 51px; */
 	letter-spacing: -1px;
 }
 
@@ -826,14 +841,20 @@ input.field_form_input.type2::input-placeholder {
 
 .dlayer_cont_low {
 	box-sizing: border-box;
-	position: absolute;
-	top: 51px;
+	/* position: absolute;
+	top: 51px; */
 	left: 0;
-	width: 100%;
-	height: calc(100% - 51px);
+	/* width: 100%;
+	height: calc(100% - 51px); */
+	flex: 1;
+	min-height: 0;
 	overflow-y: auto;
 	background: #fff;
 	border-radius: 0 0 10px 10px;
+}
+
+.dlayer_cont_low.not_rd {
+	border-radius: 0;
 }
 
 .dlayer_cont_low.type2 {
@@ -846,6 +867,21 @@ input.field_form_input.type2::input-placeholder {
 
 .dlayer_cont_low .btn_dclaysm_w {
 	margin-bottom: 15px;
+}
+
+.btn_dlayer_submit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 51px;
+	background: #00448d;
+	font-family: 'NotoSans-Medium';
+}
+
+.dlayer_submit_text {
+	color: #fff;
+	display: block;
+	font-size: 14px;
 }
 
 .btn_dlayerclose {
