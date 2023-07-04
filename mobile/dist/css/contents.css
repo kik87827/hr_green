@@ -1151,9 +1151,9 @@ input.field_form_input.type2::input-placeholder {
 .fvtb tbody tr.type2 td.has_fphoto {
 	width: 118px;
 	position: relative;
-	position: relative;
 	overflow: hidden;
-	padding: 10px 0;
+	vertical-align: top;
+	padding: 0;
 }
 
 .fvtb tbody tr.type2 td.has_fphoto .fphoto_z {
@@ -1576,17 +1576,9 @@ input.field_form_input.type2::input-placeholder {
 	left: 0;
 }
 
-.fphoto_w {
-	border: 1px solid #dbdbdb;
-	border-radius: 100%;
-	margin: 0 auto;
-	width: 80px;
-	height: 80px;
-	box-sizing: border-box;
-	background: #fff url("../images/ico_men.png") no-repeat 50% 50%/cover;
-}
 
-.fphoto_tb_w {}
+
+*/ .fphoto_tb_w {}
 
 .fphoto_tb {
 	display: table;
@@ -1611,11 +1603,11 @@ input.field_form_input.type2::input-placeholder {
 }
 
 .fphoto_z {
-	position: relative;
+	position: absolute;
 	top: 0;
 	left: 0;
-	width: 84px;
-	height: 84px;
+	width: 100%;
+	height: 100%;
 }
 
 .fphoto_w {
@@ -3537,6 +3529,13 @@ input.dlsort_int {
 	width: 25px !important;
 }
 
+.data_tb .has_icobtn {
+	width: 1px !important;
+	padding: 5px !important;
+	font-size: 0;
+	line-height: 0;
+}
+
 .data_tb .has_norsp {}
 
 .d_wpsp {
@@ -3592,6 +3591,10 @@ input.dlsort_int {
 }
 
 .data_tb_z.ptype2 td {
+	padding: 5px 2px;
+}
+
+.data_tb.ptype2 td {
 	padding: 5px 2px;
 }
 
@@ -4548,7 +4551,7 @@ input.searchform_input {
 	flex: 0 0 50px;
 	width: 50px;
 	height: 50px;
-	border-radius: 100%;
+	/* border-radius: 100%; */
 	position: relative;
 	overflow: hidden;
 	margin-right: 15px;
@@ -5009,6 +5012,20 @@ li.nodata_li {
 	top: 1px;
 }
 
+
+.btn_onlyico {
+	width: 18px;
+	height: 18px;
+	/* background: url("../images/ico_docu.png") no-repeat 50% 50%/cover; */
+	background-position: 50% 50%;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.btn_onlyico.ico_docu {
+	background-image: url("../images/ico_docu.png");
+}
 
 @media (max-width:374px) {
 	.nbr2 {
