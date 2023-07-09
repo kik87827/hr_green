@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		@@include('./include/head.html')
+	</head>
+	<body class="admin_body">
+		 <div class="page_wrap">
+			@@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "팝업"
+            })
+            <!-- middle -->
+            <section class="middle_zone sub_type2">
+                내용이 들어갑니다.
+            </section>
+            <!-- // middle -->
+        </div>
+		
+		<!-- layer -->
+		<div class="dlayer_w" id="sign_layer">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_modalbox_zone">
+				<div class="dlayer_modalbox_wrap">
+					<div class="dlayer_modalbox_td">
+						<div class="dlayer_modalbox">
+							<div class="dlayer_tit_low"><h2 class="dlayer_tit">결재 진행</h2></div>
+							<div class="dlayer_cont_low">
+								<div class="dlayer_cont_message">결재를 진행하시겠습니까?</div>
+								<div class="btn_dsubmit_group">
+									<a href="#" class="btn_dsubmit">승인</a>
+									<a href="#" class="btn_dsubmit dtype2">반려</a>
+									<a href="#" class="btn_dsubmit dtype3">취소</a>
+								</div>
+							</div>
+							<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // layer -->
+		
+		<script>
+			dimLayerShow({ target : "#sign_layer"});
+		</script>
+	</body>
+</html>

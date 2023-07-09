@@ -793,6 +793,27 @@ input.field_form_input.type2::input-placeholder {
 	width: calc(100% - 30px);
 	height: calc(100% - 80px);
 }
+.dlayer_modalbox_zone{position: fixed;
+	top: 0;
+	left:0;
+	width:100%;
+	height:100%;z-index: 10;overflow-y:auto;}
+.dlayer_modalbox_wrap{
+	
+	
+	display:table;
+	width:100%;height:100%;
+	table-layout: fixed;
+}
+.dlayer_modalbox_td{
+	vertical-align: middle;
+	display: table-cell;
+	padding:20px;
+}
+.dlayer_modalbox{
+	position:relative;max-width:450px;margin:0 auto;
+}
+.dlayer_modalbox .btn_dlayerclose{top:-8px;right:-8px;position:absolute;}
 
 .dlayer_tit_low {
 	/* position: absolute;
@@ -868,6 +889,13 @@ input.field_form_input.type2::input-placeholder {
 .dlayer_cont_low .btn_dclaysm_w {
 	margin-bottom: 15px;
 }
+
+.dlayer_cont_message{text-align: center;padding:50px 20px;text-align: center;font-size:15px;}
+.btn_dsubmit_group{display:flex;justify-content: center;padding:0 20px 20px;gap:10px;}
+.btn_dsubmit{flex:1;background:#00448d;color:#fff;border-radius:7px;line-height:1.3;font-size:13px;padding:12px 20px;box-sizing: border-box;text-align: center;}
+.btn_dsubmit.dtype2{background-color:#848484;}
+.btn_dsubmit.dtype3{background-color:#000;}
+
 
 .btn_dlayer_submit {
 	display: flex;
@@ -1053,6 +1081,10 @@ input.field_form_input.type2::input-placeholder {
 .fvtb_w.dtype4 .fvtb td {
 	padding: 6px 10px;
 }
+
+.fvtb_w.pdesign_type2 .fvtb{}
+.fvtb_w.pdesign_type2 .fvtb th{padding-top:10px;padding-bottom:10px;}
+.fvtb_w.pdesign_type2 .fvtb td{padding-top:10px;padding-bottom:10px;}
 
 .fvtb {
 	width: 100%;
@@ -2566,6 +2598,11 @@ select.dsel.medium_size {
 .hvtb_w.mtype2 {
 	margin: 0 -15px;
 }
+
+.pdesign_type2 .hvtb{}
+.pdesign_type2 .hvtb th{padding-top:10px;padding-bottom:10px;}
+.pdesign_type2 .hvtb td{padding-top:10px;padding-bottom:10px;}
+
 
 .hvtb {
 	width: 100%;

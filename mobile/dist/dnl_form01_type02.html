@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./css/reset.css" />
+	<link rel="stylesheet" href="./css/layout.css" />
+	<link rel="stylesheet" href="./css/contents.css" />
+	<script src="./js/jquery-1.12.4.min.js"></script>
+	<script src="./js/ui.js"></script>
+	<title>H그린파워 HR시스템</title>
+</head>
+
+
+<body class="front_body">
+	<div class="page_wrap">
+		<header class="header_zone">
+			<div class="header_icomenu_g">
+				<a href="#" class="header_icomenu ico_home"><span class="hdtext">홈</span></a>
+			</div>
+
+			<h1 class="header_sub_title">근태신청</h1>
+
+			<a href="#" class="btn_mobile_menu">
+				<div class="btn_mobile_menu_obj"></div>
+				<span class="hdtext">전체메뉴 열기</span>
+			</a>
+			<!-- mobile_menu -->
+			<div class="mobile_mainmenu_zone">
+				<div class="mainmenu_dim"></div>
+				<div class="mobile_mainmenu_wrap">
+					<div class="mbutil_low">
+						<!-- 로그인 전 -->
+						<!-- <ul class="mbutil_hlist">
+                <li><a href="#" class="mbutil">로그인</a></li>
+            </ul> -->
+						<!-- // 로그인 전 -->
+						<!-- 로그인 후 -->
+						<ul class="mbutil_hlist">
+							<li>
+								<a href="#" class="mbutil">로그아웃</a>
+							</li>
+						</ul>
+						<!-- // 로그인 후 -->
+					</div>
+					<div class="mbmenu_low">
+						<div class="mbmenu_inwrap">
+							<ul class="mbmenu_vlist">
+								<li><a href="#" class="mbmenu_one">MY인사</a></li>
+								<li><a href="#" class="mbmenu_one">승인요청</a></li>
+								<li><a href="#" class="mbmenu_one">승인대기</a></li>
+								<li><a href="#" class="mbmenu_one">근태현황</a></li>
+								<li><a href="#" class="mbmenu_one">근태신청</a></li>
+								<li><a href="#" class="mbmenu_one">복지지원비신청</a></li>
+								<li><a href="#" class="mbmenu_one">휴양시설</a></li>
+								<li><a href="#" class="mbmenu_one">급여명세서조회</a></li>
+								<li><a href="#" class="mbmenu_one">제증명신청</a></li>
+								<li><a href="#" class="mbmenu_one">임직원조회</a></li>
+							</ul>
+						</div>
+					</div>
+					<a href="#" class="btn_mbmenuclose">
+						<span class="hdtext">메인메뉴 닫기</span>
+					</a>
+				</div>
+			</div>
+			<!-- // mobile_menu -->
+		</header>
+		<!-- middle -->
+		<section class="middle_zone">
+			<div class="form_field_item_zone">
+				<div class="form_field_item_group">
+					<div class="form_field_item">
+						<div class="form_field_title_row">
+							<p class="form_field_title">결재라인</p>
+							<button type="button" class="btn_form_more" id="btn_form_more"></button>
+						</div>
+						<div class="form_field_content_row type2">
+							<div class="field_content_item">
+								<p class="field_content_title">작성부서</p>
+								<div class="field_content_data_wrap">
+									<ul class="field_data_form">
+										<li>
+											<div class="field_data_thcols"><span class="field_data_key">기안</span></div>
+											<div class="field_data_tdcols">
+												<div class="field_data_value">곽훈도(과장/6급)</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="field_content_item">
+								<p class="field_content_title">처리부서</p>
+								<div class="field_content_data_wrap">
+									<ul class="field_data_form">
+										<li>
+											<div class="field_data_thcols"><span class="field_data_key">결재</span></div>
+											<div class="field_data_tdcols">
+												<div class="field_data_value">진상인(과장/6급)</div>
+											</div>
+										</li>
+										<li>
+											<div class="field_data_thcols"><span class="field_data_key">수신</span></div>
+											<div class="field_data_tdcols">
+												<div class="field_data_value">홍길동(팀장/5급)</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form_field_item">
+						<div class="form_field_title_row">
+							<p class="form_field_title">신청내용</p>
+						</div>
+						<div class="form_field_content_row">
+							<div class="tail_field_item">
+								<div class="tail_field_title_row">
+									<p class="tail_field_title">잔여휴가현황(기준 일수)</p>
+									<button type="button" class="btn_form_more" data-target="#tail_content_data"></button>
+								</div>
+								<div class="tail_field_content_row" id="tail_content_data">
+									<div class="tbsk_tb_w">
+										<table class="tbsk_tb" name="tail_field_table">
+											<thead>
+												<tr>
+													<th class="ctb_wid01">휴가구분</th>
+													<th class="ctb_wid02">발생</th>
+													<th class="ctb_wid03">사용</th>
+													<th class="ctb_wid04">신청</th>
+													<th class="ctb_wid05">잔여</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="bg_type2"><span class="tb_data type_label">연차</span></td>
+													<td><span class="tb_data">16</span></td>
+													<td><span class="tb_data">5</span></td>
+													<td><span class="tb_data">1</span></td>
+													<td><span class="tb_data">10</span></td>
+												</tr>
+												<tr>
+													<td class="bg_type2"><span class="tb_data type_label">연중휴가</span>
+													</td>
+													<td><span class="tb_data">4</span></td>
+													<td><span class="tb_data"></span></td>
+													<td><span class="tb_data"></span></td>
+													<td><span class="tb_data">4</span></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="tail_field_item">
+								<div class="fvtb_w dtype4 pdesign_type2">
+									<table class="fvtb">
+										<tbody>
+											<tr>
+												<th class="has_fvth_sp"><span class="fvth_sp">신청자</span></th>
+												<td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+											</tr>
+											<tr>
+												<th class="has_fvth_sp"><span class="fvth_sp">휴가구분</span></th>
+												<td>
+													<div class="inform_item_fxwrap">
+														<div class="inform_item">
+															<select class="dsel">
+																<option>경조휴가</option>
+															</select>
+														</div>
+														<div class="inform_item">
+															<select class="dsel">
+																<option>결혼(본인)</option>
+															</select>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th class="has_fvth_sp"><span class="fvth_sp">휴가기간</span></th>
+												<td>
+													<div class="inblock_item_group">
+														<div class="inblock_item">
+															<input type="date" class="input_calendar half_wid">
+														</div>
+														<div class="inblock_item">
+															<input type="date" class="input_calendar half_wid">
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th class="has_fvth_sp"><span class="fvth_sp">휴가일수</span></th>
+												<td>
+													<input type="text" class="fvint" readonly value="4" style="width:50px">
+												</td>
+											</tr>
+											<tr>
+												<th class="has_fvth_sp"><span class="fvth_sp">대상가족</span></th>
+												<td><input type="text" class="fvint" readonly value="곽훈도(0241)"></td>
+											</tr>
+											<tr>
+												<th class="has_fvth_sp"><span class="fvth_sp">질병구분<br>상세</span></th>
+												<td>
+													<div class="inform_item_fxwrap">
+														<div class="inform_item">
+															<select class="dsel">
+																<option>선택</option>
+															</select>
+														</div>
+														<div class="inform_item">
+															<input type="text" class="fvint">
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr class="type3">
+												<td colspan="2">
+													<p class="fvth_block">신청사유</p>
+													<textarea class="fvta htype2"></textarea>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn_fsm_w">
+					<div class="btn_fsm_fxwrap">
+						<a href="javascript:;" data-toggle="#file_form5" class="btn_fsm type2 d_type2"><span class="toggle_ico"></span><span class="toggle_text">첨부파일</span></a>
+						<a href="javascript:;" class="btn_fsm">결재요청</a>
+					</div>
+				</div>
+				<div class="file_form_group toggle_item" id="file_form5">
+					<div class="fileui_tb_w">
+						<div class="fileui_tb">
+							<div class="fileui_td has_btn">
+								<div class="fkef_tb2_w">
+									<input type="file" class="fkef_file">
+									<a href="javascript:;" class="btn_fakefile">파일 선택</a>
+								</div>
+							</div>
+							<div class="fileui_td">
+								<div class="filename_para">선택된 파일 없음</div>
+							</div>
+							<div class="fileui_td has_btn">
+								<a href="javascript:;" class="btn_fakefile">파일 등록</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="tbsk_tb_w">
+						<table class="tbsk_tb">
+							<thead>
+								<tr>
+									<th class="ctb2_w01">파일명</th>
+									<th class="ctb2_w02">용량</th>
+									<th class="ctb2_w03">삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="has_data">첨부파일.jpg</td>
+									<td>14KB</td>
+									<td><a href="javascript:;" class="btn_ctblink">삭제</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- // middle -->
+	</div>
+
+	<!-- layer -->
+	<div class="dlayer_w" id="sign_layer">
+		<div class="dlayer_bg"></div>
+		<div class="dlayer_box">
+			<div class="dlayer_tit_low">
+				<h2 class="dlayer_tit">결재자 지정</h2>
+			</div>
+			<div class="dlayer_cont_low">
+				<div class="data_table_top">
+					<a href="javascript:;" class="btn_csm type4">결재자 추가</a>
+				</div>
+				<div class="tbsk_tb_w">
+					<table class="tbsk_tb no_fixed" id="sign_line_tb">
+						<thead>
+							<tr>
+								<th class="ctb_w01"><span class="ctb_thshort_label">삭제</span></th>
+								<th class="ctb_w02"><span class="ctb_thshort_label">▲</span></th>
+								<th class="ctb_w03"><span class="ctb_thshort_label">▼</span></th>
+								<th class="ctb_w04">사원정보</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="has_hvico"><input type="checkbox" class="rdchk"></td>
+								<td class="has_hvico"><button type="button" class="btn_control_updown type_up"></button></td>
+								<td class="has_hvico"><button type="button" class="btn_control_updown type_down"></button></td>
+								<td class="align_left">사원정보가 들어갑니다.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btn_fsm_w">
+					<a href="javascript:;" class="btn_fsm">결재라인 적용</a>
+				</div>
+			</div>
+			<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+		</div>
+	</div>
+	<style>
+		#sign_line_tb .ctb_w01 {
+			width: 10%;
+		}
+
+		#sign_line_tb .ctb_w02 {
+			width: 10%;
+		}
+
+		#sign_line_tb .ctb_w03 {
+			width: 10%;
+		}
+
+		#sign_line_tb .ctb_w04 {}
+	</style>
+	<!-- // layer -->
+
+
+
+	<script>
+		// 퍼블확인용
+		let url = window.location.href.split('?')[1];
+		let url_2 = url !== undefined ? url.split('#')[0] : null;
+		if (url_2 === "popup") {
+			dimLayerShow({
+				target: "#sign_layer"
+			});
+		}
+
+		document.querySelector("#btn_form_more").addEventListener("click", () => {
+			dimLayerShow({
+				target: "#sign_layer"
+			});
+		});
+
+		toggleFunc();
+	</script>
+
+</body>
+
+</html>
