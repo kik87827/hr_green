@@ -438,6 +438,7 @@
 
 .mc_tailmenu_tablist {
 	display: flex;
+	background:#fff;
 	border-bottom: 1px solid #00448d;
 }
 
@@ -4397,6 +4398,12 @@ input.input_time:read-only {
 	color: #333333;
 	padding: 13px;
 	font-weight: 500;
+}
+.tabmenu_box.type2 .tabmenu_box_text{padding:5px 13px;line-height:1.2;}
+.tabmenu_box.type2 .tabmenu_box_text br{display:none;}
+
+@media(max-width:400px){
+	.tabmenu_box.type2 .tabmenu_box_text br{display:block;}
 }
 
 .tabmenu_cont_wrap {
