@@ -2,6 +2,10 @@
 /*
 	컨텐츠 css
 */
+body ::-webkit-scrollbar {width: 10px;}
+body ::-webkit-scrollbar-thumb {background-color: #ccc;border-radius: 10px;background-clip: padding-box;border: 2px solid transparent;}
+body ::-webkit-scrollbar-track {background-color: transparent;border-radius: 10px;box-shadow: inset 0px 0px 5px transparent;}
+
 .page_wrap{min-width:1280px;}
 .page_wrap.main_page{display:flex;flex-direction: column;height:100vh;background:#f1f1f1;}
 .page_wrap.main_page:before{display:block;content:'';width:100%;height:100%;background:#f1f1f1;position:fixed;top:0;left:0;z-index:0;}

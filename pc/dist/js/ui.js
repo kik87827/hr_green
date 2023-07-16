@@ -14,10 +14,8 @@ HGREEN = {
 				$("html").removeClass("touchmode");
 			}
 			funcThis.dimLayerControl();
-			funcThis.layerCommon();
 		});
 		$(window).on("load",function(){
-			funcThis.oldBrowerPop();
 		});
 	},
 	
@@ -120,7 +118,6 @@ HGREEN = {
 		const full_field_type = document.querySelector(".full_field_type");
 		function action(){
 			full_field_type.style.height = window.innerHeight - header_zone_height + "px";
-			console.log(full_field_type);
 		}
 		action();
 		window.addEventListener('resize', action);
