@@ -16,8 +16,11 @@
 	.page_wrap.field_container_wrap .middle_zone.field_container{display:block;}
 }
 
-.header_zone{width:100%;background:#fff;box-sizing:border-box;border-bottom:1px solid #b8b8b8;height:52px;text-align: center;padding:0 51px;position:fixed;top:0;left:0;z-index:50}
-.header_zone.type2{padding-left:15px;}
+.header_zone{width:100%;background:url("../images/bg_header.png") repeat-y 0 0/100% auto;box-sizing:border-box;border-bottom:1px solid #b8b8b8;height:52px;text-align: center;padding:0 51px;position:fixed;top:0;left:0;z-index:50}
+.header_zone.type2{padding-left:15px;background:#fff;}
+.header_zone.type2 .btn_mobile_menu_obj{background-color:#000;}
+.header_zone.type2 .btn_mobile_menu_obj:before{background-color:#000;}
+.header_zone.type2 .btn_mobile_menu_obj:after{background-color:#000;}
 .header_logo_g{display:flex;align-items: center;position:absolute;top:0;left:15px;height:100%;font-size:0;line-height:0;}
 .header_plogo{display:inline-block;margin-right:9px;}
 .header_plogo:last-of-type{margin-right:0;}
@@ -26,7 +29,7 @@
 .header_plogo.logo_bc{}
 .header_plogo.logo_bc img{width:23px;}
 .header_main_title{display:flex;height:100%;align-items: center;color:#333333;justify-content: center;font-weight:700;font-size:18px;}
-.header_sub_title{display:flex;height:100%;align-items: center;color:#1b1b1b;justify-content: center;font-weight:700;font-size:16px;}
+.header_sub_title{display:flex;height:100%;align-items: center;color:#fff;justify-content: center;font-weight:700;font-size:16px;}
 
 .header_logo{height:49px;display:flex;align-items:center;}
 .header_logoitem{display:inline-block;font-size:0;line-height:0;}
@@ -34,7 +37,7 @@
 
 .header_icomenu_g{position:absolute;top:0;left:0;display:flex;align-items: center;}
 .header_icomenu{display:inline-block;width:51px;height:51px;background-repeat:no-repeat;background-size:100% auto;background-position:0 0;}
-.header_icomenu.ico_home{background-image:url("../images/ico_header_home.png");}
+.header_icomenu.ico_home{background-image:url("../images/ico_header_home_w.png");}
 
 .header_main_imgtitle{display:flex;align-items: center;height:100%;position:absolute;top:0;left:0;padding:0 15px;}
 .header_main_imglogo{display:inline-block;font-size:0;line-height:0;}
@@ -42,10 +45,10 @@
 
 .btn_mobile_menu{display:block;position:absolute;width:51px;height:51px;top:0;right:0;}
 .btn_mobile_menu_obj{
-    position:absolute;top:50%;left:50%;width:40%;height:2px;background:#000;transform:translate(-50%,-50%);
+    position:absolute;top:50%;left:50%;width:40%;height:2px;background:#fff;transform:translate(-50%,-50%);
 }
 .btn_mobile_menu_obj:before,
-.btn_mobile_menu_obj:after{display:block;content:'';background:#000;height:2px;position:absolute;top:0;right:0;width:100%;}
+.btn_mobile_menu_obj:after{display:block;content:'';background:#fff;height:2px;position:absolute;top:0;right:0;width:100%;}
 .btn_mobile_menu_obj:before{transform: translateY(-6px);}
 .btn_mobile_menu_obj:after{transform: translateY(6px);}
 .mobile_mainmenu_zone{

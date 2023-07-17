@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('./include/head.html')
+    <body class="front_body">
+        <div class="page_wrap">
+            @@include('./include/header_sub.html', {
+                page_sub: true,
+                sub_title: "출장비신청내역"
+            })
+            <!-- middle -->
+            <section class="middle_zone">
+                <div class="form_field_item_zone">
+                    <div class="form_field_item_group">
+                        <div class="form_field_item">
+                            <div class="form_field_title_row dtype3">
+                                <p class="form_field_title">출장기간</p>
+                            </div>
+                            <div class="form_field_content_row">
+                                <div class="inform_item_fxwrap">
+                                    <div class="inform_item">
+                                        <input type="date" class="input_calendar" value="2020-08-01">
+                                    </div>
+                                    <div class="inform_item else_item">
+                                        <span class="inform_elsetext">~</span>
+                                    </div>
+                                    <div class="inform_item">
+                                        <input type="date" class="input_calendar" value="2020-08-01">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="loop_list_render">
+                            <div class="loop_top_wrap">
+                                <a href="#" class="btn_control_box" id="btn_outguide_call">
+                                    <span class="control_box_text">출장비지급기준</span>
+                                </a>
+                            </div>
+                            <div class="form_loop_item_wrap">
+                                <ul class="form_loop_item_list">
+                                    <li>
+                                        <div class="form_loop_item">
+                                            <table class="tail_data_tb" name="outwork_tb">
+                                                <tr>
+                                                    <th class="wid01"><span class="tail_data_thtext">결재상태</span></th>
+                                                    <th class="wid02"><span class="tail_data_thtext">출장시작일</span></th>
+                                                    <th class="wid03"><span class="tail_data_thtext">출장종료일</span></th>
+                                                    <th class="wid04"><span class="tail_data_thtext">출장지</span></th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="wid01"><span class="tail_data_tdtext">결재완료</span></td>
+                                                    <td class="wid02"><span class="tail_data_tdtext">2023.06.20</span></td>
+                                                    <td class="wid03"><span class="tail_data_tdtext">2023.06.20</span></td>
+                                                    <td class="wid04"><span class="tail_data_tdtext">서울</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2"><span class="tail_data_thtext">방문처</span></th>
+                                                    <th class="wid03"><span class="tail_data_thtext">출장비</span></th>
+                                                    <th class="wid04"><span class="tail_data_thtext">상세보기</span></th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="align_left"><span class="tail_data_tdtext">서울 현대모비스 본사</span></td>
+                                                    <td class="wid03 align_right"><span class="tail_data_tdtext">50,000</span></td>
+                                                    <td class="wid04"><a href="javascript:;" class="btn_csm xsm" name="btn_tail_call">상세보기</a></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form_loop_item">
+                                            <table class="tail_data_tb" name="outwork_tb">
+                                                <tr>
+                                                    <th class="wid01"><span class="tail_data_thtext">결재상태</span></th>
+                                                    <th class="wid02"><span class="tail_data_thtext">출장시작일</span></th>
+                                                    <th class="wid03"><span class="tail_data_thtext">출장종료일</span></th>
+                                                    <th class="wid04"><span class="tail_data_thtext">출장지</span></th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="wid01"><span class="tail_data_tdtext">결재완료</span></td>
+                                                    <td class="wid02"><span class="tail_data_tdtext">2023.06.20</span></td>
+                                                    <td class="wid03"><span class="tail_data_tdtext">2023.06.20</span></td>
+                                                    <td class="wid04"><span class="tail_data_tdtext">서울</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2"><span class="tail_data_thtext">방문처</span></th>
+                                                    <th class="wid03"><span class="tail_data_thtext">출장비</span></th>
+                                                    <th class="wid04"><span class="tail_data_thtext">상세보기</span></th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="align_left"><span class="tail_data_tdtext">서울 현대모비스 본사</span></td>
+                                                    <td class="wid03 align_right"><span class="tail_data_tdtext">50,000</span></td>
+                                                    <td class="wid04"><a href="javascript:;" class="btn_csm xsm" name="btn_tail_call">상세보기</a></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form_loop_item">
+                                            <table class="tail_data_tb" name="outwork_tb">
+                                                <tr>
+                                                    <th class="wid01"><span class="tail_data_thtext">결재상태</span></th>
+                                                    <th class="wid02"><span class="tail_data_thtext">출장시작일</span></th>
+                                                    <th class="wid03"><span class="tail_data_thtext">출장종료일</span></th>
+                                                    <th class="wid04"><span class="tail_data_thtext">출장지</span></th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="wid01"><span class="tail_data_tdtext">결재완료</span></td>
+                                                    <td class="wid02"><span class="tail_data_tdtext">2023.06.20</span></td>
+                                                    <td class="wid03"><span class="tail_data_tdtext">2023.06.20</span></td>
+                                                    <td class="wid04"><span class="tail_data_tdtext">서울</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2"><span class="tail_data_thtext">방문처</span></th>
+                                                    <th class="wid03"><span class="tail_data_thtext">출장비</span></th>
+                                                    <th class="wid04"><span class="tail_data_thtext">상세보기</span></th>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="align_left"><span class="tail_data_tdtext">서울 현대모비스 본사</span></td>
+                                                    <td class="wid03 align_right"><span class="tail_data_tdtext">50,000</span></td>
+                                                    <td class="wid04"><a href="javascript:;" class="btn_csm xsm" name="btn_tail_call">상세보기</a></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <a href="#none" class="first">Go to first</a>
+                        <a href="#none" class="prev">Go to prev</a>
+                        <a href="#none" class="num on">1</a>
+                        <a href="#none" class="num">2</a>
+                        <a href="#none" class="num">3</a>
+                        <a href="#none" class="num">4</a>
+                        <a href="#none" class="num">5</a>
+                        <a href="#none" class="next">Go to next</a>
+                        <a href="#none" class="last">Go to last</a>
+                    </div>
+                </div>
+                
+            </section>
+            <!-- // middle -->
+        </div>
+
+        <!-- layer -->
+		<div class="dlayer_w" id="out_guide_layer">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_modalbox_zone">
+				<div class="dlayer_modalbox_wrap">
+					<div class="dlayer_modalbox_td">
+						<div class="dlayer_modalbox">
+							<div class="dlayer_tit_low"><h2 class="dlayer_tit">출장비지급기준</h2></div>
+							<div class="dlayer_cont_low">
+								<p style="padding:20px">문구내용추가예정</p>
+							</div>
+							<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // layer -->
+
+        <!-- layer -->
+		<div class="dlayer_w" id="detail_layer">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_modalbox_zone">
+				<div class="dlayer_modalbox_wrap">
+					<div class="dlayer_modalbox_td">
+						<div class="dlayer_modalbox">
+							<div class="dlayer_tit_low"><h2 class="dlayer_tit">상세보기</h2></div>
+							<div class="dlayer_cont_low">
+                                <div class="form_loop_item mt20">
+                                    <table class="tail_data_tb" name="outwork_popup_tb">
+                                        <tr>
+                                            <th class="wid01"><span class="tail_data_thtext">교통비</span></th>
+                                            <th class="wid02"><span class="tail_data_thtext">여비</span></th>
+                                            <th class="wid03"><span class="tail_data_thtext">숙박비</span></th>
+                                        </tr>
+                                        <tr>
+                                            <td class="wid01 align_right"><span class="tail_data_tdtext">5,000</span></td>
+                                            <td class="wid02 align_right"><span class="tail_data_tdtext">15,000</span></td>
+                                            <td class="wid03 align_right"><span class="tail_data_tdtext">0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="3"><span class="tail_data_thtext">비고</span></th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" class="align_left"><span class="tail_data_tdtext">칼럼명 : REASON</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+							</div>
+							<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // layer -->
+
+        
+        <style>
+            [name='outwork_tb'] .wid01{}
+            [name='outwork_tb'] .wid02{}
+            [name='outwork_tb'] .wid03{}
+            [name='outwork_tb'] .wid04{}
+            [name='outwork_tb'] .wid05{}
+            
+            [name='outwork_popup_tb'] .wid01{}
+            [name='outwork_popup_tb'] .wid02{}
+            [name='outwork_popup_tb'] .wid03{}
+            [name='outwork_popup_tb'] .wid04{}
+            [name='outwork_popup_tb'] .wid05{}
+        </style>
+
+        <script>
+           document.querySelector("#btn_outguide_call").addEventListener("click",()=>{
+                dimLayerShow({ target : "#out_guide_layer"});
+           });
+           document.querySelectorAll("[name='btn_tail_call']").forEach((item)=>{
+                item.addEventListener("click",()=>{
+                    dimLayerShow({ target : "#detail_layer"});
+                });
+           })
+        </script>
+    </body>
+</html>

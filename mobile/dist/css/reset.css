@@ -79,6 +79,7 @@ select::-ms-expand {display: none;}
 .mb40{margin-bottom: 40px !important;}
 .fl{float:left !important;}
 .align_left{text-align:left !important;}
+.align_right{text-align:right !important;}
 .txtleft{text-align:left !important;}
 .txtcenter{text-align:center !important;}
 .pbt20{padding-left:20px !important;padding-right:20px !important;}
