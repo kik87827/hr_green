@@ -1073,7 +1073,7 @@ input.field_form_input.type2::input-placeholder {
 .fvtb_w.dtype3 .fvtb th .fvth_sp {}
 
 .fvtb_w.dtype3 .fvtb td {
-	padding: 6px 10px;
+	padding: 10px 10px;
 }
 
 .fvtb_w.dtype4 .fvtb {
@@ -1081,7 +1081,7 @@ input.field_form_input.type2::input-placeholder {
 }
 
 .fvtb_w.dtype4 .fvtb td {
-	padding: 6px 10px;
+	padding: 10px 10px;
 }
 
 .fvtb_w.pdesign_type2 .fvtb{}
@@ -1148,13 +1148,13 @@ input.field_form_input.type2::input-placeholder {
 }
 
 .fvtb tbody td.has_fitem {
-	padding: 7.5px 11.5px;
+	padding: 10px 11.5px;
 	font-size: 0;
 	line-height: 0;
 }
 
 .fvtb tbody td.has_fitem2 {
-	padding: 7.5px 11.5px;
+	padding: 10px 11.5px;
 	font-size: 0;
 	line-height: 0;
 }
@@ -2637,7 +2637,7 @@ select.dsel.medium_size {
 .hvtb tbody td {
 	border-right: 1px solid #d9d9d9;
 	border-bottom: 1px solid #d9d9d9;
-	padding: 5px 0;
+	padding: 10px 0;
 	font-size: 12px;
 }
 
@@ -5091,9 +5091,9 @@ li.nodata_li {
 .form_loop_item_list > li:last-of-type{margin-bottom:0;}
 .form_loop_item{border-top: 1px solid #626262;}
 .tail_data_tb{width:100%;table-layout: fixed;}
-.tail_data_tb th{padding:5px 10px;border-right:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;background:#f8f8f8;}
+.tail_data_tb th{padding:10px 10px;border-right:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;background:#f8f8f8;}
 .tail_data_tb th:last-of-type{border-right:0;}
-.tail_data_tb td{padding:5px 10px;border-right:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;}
+.tail_data_tb td{padding:10px 10px;border-right:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;}
 .tail_data_tb td:last-of-type{border-right:0;}
 
 @media (max-width:374px) {
