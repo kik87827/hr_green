@@ -642,8 +642,9 @@
 }
 
 .fcopy_main_sub {
-	font-size: 21px;
-	margin-top: 5px;
+	font-size: 12px;
+	font-family: 'NotoSans-Regular';
+	margin-top: 15px;
 }
 
 .field_copy_sub {
@@ -745,7 +746,7 @@ input.field_form_input.type2::input-placeholder {
 
 
 .btn_field_submit_row {
-	margin-top: 17px;
+	margin-top: 35px;
 }
 
 .btn_field_submit {
@@ -5132,3 +5133,28 @@ li.nodata_li {
 		display: block !important;
 	}
 }
+
+
+/* 복리후생안내 */
+.middle_box_title{font-size:14px;color:#1b1b1b;font-weight:500;border-bottom:1px solid #626262;padding:15px 15px;}
+.middle_box_toggle_wrap{padding:15px;}
+.middle_box_toggle_item{border:1px solid #d8d8d8;margin-bottom:10px;border-radius:8px;}
+.middle_box_toggle_item:last-of-type{margin-bottom:0;}
+.middle_box_togbar{display:block;color:#333333;font-size:14px;padding:12px 15px;position:relative;}
+.middle_box_togbar:after{border-left:1px solid #333333;border-bottom:1px solid #333;display:block;transform:rotate(-45deg);content:'';width:10px;height:10px;position:absolute;top:13px;right:20px;}
+.middle_box_togbar_text{}
+.middle_box_togcont{border-top:1px solid #cacaca;padding:15px 10px;display:none;}
+.mbox_togcont_title{font-size:13px;color:#333333;margin:0 5px 10px;}
+.mbox_togcont_file_list{background:#f8f8f8;border:1px solid #d5d5d5;}
+.mbox_togcont_file_list > li{border-bottom:1px solid #d5d5d5;}
+.mbox_togcont_file_list > li:last-of-type{border-bottom:0;}
+.mbox_togcont_file{display:flex;align-items: center;justify-content: space-between;padding:8px 15px;}
+.mbox_togcont_file_cols{}
+.mbox_togcont_btn_cols{}
+.mbox_file_label{display:flex;align-items: center;font-size:13px;color:#333;}
+.mbox_file_label:before{display:block;content:'';width:14px;height:14px;background:url("../images/ico_filedown.png") no-repeat 0 0/100% auto;flex:0 0 14px;margin-right:5px;}
+.btn_downbox{display:inline-block;font-size:13px;color:#fff;background: #f8f8f8;border:1px solid #858585;color: #1f1f1f;background:#fff;border-radius:100px;padding:3px 10px;}
+
+.middle_box_toggle_item.active{}
+.middle_box_toggle_item.active .middle_box_togbar:after{transform:rotate(-225deg);top:20px;}
+.middle_box_toggle_item.active .middle_box_togcont{display:block;}

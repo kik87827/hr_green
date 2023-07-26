@@ -10,9 +10,72 @@
         })
         <!-- middle -->
         <section class="middle_zone">
-            내용이 들어갑니다.
+            <div class="middle_box_title">복리후생 제도 안내</div>
+            <div class="middle_box_toggle_wrap">
+                <div class="middle_box_toggle_item active">
+                    <a href="#" class="middle_box_togbar"><span class="middle_box_togbar_text">주택이자지원</span></a>
+                    <div class="middle_box_togcont">
+                        <p class="mbox_togcont_title">첨부파일</p>
+                        <ul class="mbox_togcont_file_list">
+                            <li>
+                                <div class="mbox_togcont_file">
+                                    <div class="mbox_togcont_file_cols"><a href="#" class="mbox_file_label">주택이자지원 제도.pdf</a></div>
+                                    <div class="mbox_togcont_btn_cols"><a href="#" class="btn_downbox">다운로드</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mbox_togcont_file">
+                                    <div class="mbox_togcont_file_cols"><a href="#" class="mbox_file_label">주택이자지원 제도.pdf</a></div>
+                                    <div class="mbox_togcont_btn_cols"><a href="#" class="btn_downbox">다운로드</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mbox_togcont_file">
+                                    <div class="mbox_togcont_file_cols"><a href="#" class="mbox_file_label">주택이자지원 제도.pdf</a></div>
+                                    <div class="mbox_togcont_btn_cols"><a href="#" class="btn_downbox">다운로드</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="middle_box_toggle_item">
+                    <a href="#" class="middle_box_togbar"><span class="middle_box_togbar_text">주택이자지원 2</span></a>
+                    <div class="middle_box_togcont">
+                        <p class="mbox_togcont_title">첨부파일</p>
+                        <ul class="mbox_togcont_file_list">
+                            <li>
+                                <div class="mbox_togcont_file">
+                                    <div class="mbox_togcont_file_cols"><a href="#" class="mbox_file_label">주택이자지원 제도.pdf</a></div>
+                                    <div class="mbox_togcont_btn_cols"><a href="#" class="mbox_togcont_btn">다운로드</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mbox_togcont_file">
+                                    <div class="mbox_togcont_file_cols"><a href="#" class="mbox_file_label">주택이자지원 제도.pdf</a></div>
+                                    <div class="mbox_togcont_btn_cols"><a href="#" class="mbox_togcont_btn">다운로드</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mbox_togcont_file">
+                                    <div class="mbox_togcont_file_cols"><a href="#" class="mbox_file_label">주택이자지원 제도.pdf</a></div>
+                                    <div class="mbox_togcont_btn_cols"><a href="#" class="mbox_togcont_btn">다운로드</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- // middle -->
+        <script>
+            document.querySelectorAll(".middle_box_togbar").forEach((item) => {
+                item.addEventListener("click",(e)=>{
+                    e.preventDefault();
+                    const thisTarget = e.currentTarget;
+                    thisTarget.closest(".middle_box_toggle_item").classList.toggle("active");
+                })
+            })
+        </script>
     </div>
 </body>
 
