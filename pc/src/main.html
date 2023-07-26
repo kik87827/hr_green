@@ -578,16 +578,14 @@
 							var thisItemThead = thisItem.find(".getdata_thead_wrap");
 							var thisItemTbody = thisItem.find(".getdata_tbody_wrap");
 							var thisItemTbodyTr = thisItemTbody.find("tr").eq(thisItem.attr("data-scroll"));
-							var scrollAddValue = 0;
+							var scrollAddValue = 1;
 							if(thisItemTbody.length){
 								thisItemTbody.css({
 									"max-height" : ""
 								})
 							}
 							if(thisItemTbodyTr.length){
-								if($("html").hasClass("gecko")){
-									scrollAddValue = 1;
-								}
+								
 								thisItemTbody.css({
 									"max-height" : thisItemTbodyTr.position().top + scrollAddValue
 								})

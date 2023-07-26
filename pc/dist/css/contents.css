@@ -211,7 +211,7 @@ _:-ms-fullscreen, :root .text_getdata:after{
 .mc_calendar_wrap .ui-datepicker-month{font-size:18px;font-family: 'NotoSans-Bold';}
 .mc_calendar_wrap .ui-datepicker-year{}
 .mc_calendar_wrap .ui-datepicker-month{}
-.mc_calendar_wrap .ui-datepicker-calendar{}
+.mc_calendar_wrap .ui-datepicker-calendar{height:445px;}
 .mc_calendar_wrap .ui-datepicker-calendar thead th{background:#f9fcff;font-size:16px;color:#333333;border-right:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;}
 .mc_calendar_wrap .ui-datepicker-calendar tbody td{position:relative;border:1px solid #e7e7e7;height:55px;text-align: left;padding:0;vertical-align: top;padding:5px;font-size:15px;color:#4e4e4e;}
 .mc_calendar_wrap .ui-datepicker-calendar tbody td:hover{z-index:2;}
